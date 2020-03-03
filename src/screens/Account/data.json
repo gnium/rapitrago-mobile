@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "home",
+    "text": "Manage Addresses"
+  },
+  {
+    "icon": "card",
+    "text": "Payments"
+  },
+  {
+    "icon": "pricetag",
+    "text": "Offers"
+  },
+  {
+    "icon": "help-circle",
+    "text": "Help"
+  }
+]

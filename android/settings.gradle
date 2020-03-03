@@ -1,0 +1,3 @@
+rootProject.name = 'Rapitrago'
+
+include ':app'
