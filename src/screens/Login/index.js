@@ -4,6 +4,7 @@ import { Container, Content, Text, View, Button } from "native-base";
 import styles from "./styles";
 
 const map = require("../../../assets/map.png");
+const logo = require('../../../assets/login-background.jpg');
 
 class Login extends Component {
   constructor(props) {
@@ -11,43 +12,46 @@ class Login extends Component {
   }
 
   render() {
+    const submitting = false;
     const navigation = this.props.navigation;
     return (
-      <Container style={styles.container}>
-        <Content>
+      <Container style={styles.background}>
+        <Content contentContainerStyle={styles.mainContent} enableOnAndroid>
           <SafeAreaView />
-          <View style={styles.topTextView}>
-            <Text style={styles.topText}>Choose your location</Text>
-          </View>
-          <Image source={map} style={styles.mapImage} />
-          <View style={styles.infoTextView}>
-            <Text style={styles.infoText}>
-              Looks like we cant locate you right now.
-            </Text>
-            <Text style={styles.infoText}>
-              Please turn on your location services to know your delivery area.
-            </Text>
-          </View>
-
-          <Button
-            block
-            style={styles.gpsAutoBtn}
-            onPress={() => navigation.navigate("Location")}
-          >
-            <Text>Use my GPS location</Text>
-          </Button>
-
-          <Text style={styles.otherText}>
-            Or manually enter your address below
-          </Text>
-
-          <Button
-            block
-            style={styles.gpsManualBtn}
-            onPress={() => navigation.navigate("Location")}
-          >
-            <Text>Enter the location manually</Text>
-          </Button>
+            <Image source={logo} style={styles.logo} />
+            <Button
+                    block
+                    large
+                    style={[styles.baseBtn, styles.facebookBtn]}
+                    onPress={() => {
+                        this.facebookLogin();
+                    }}
+                    disabled={submitting}
+                  >
+                    <Text style={styles.baseBtnText}>Iniciar con Facebook</Text>
+            </Button>
+            <Button
+                    block
+                    large
+                    style={[styles.baseBtn, styles.facebookBtn]}
+                    onPress={() => {
+                        this.facebookLogin();
+                    }}
+                    disabled={submitting}
+                  >
+                    <Text style={styles.baseBtnText}>Iniciar con Whatsapp</Text>
+            </Button>
+            <Button
+                    block
+                    large
+                    style={[styles.baseBtn, styles.facebookBtn]}
+                    onPress={() => {
+                        this.facebookLogin();
+                    }}
+                    disabled={submitting}
+                  >
+                    <Text style={styles.baseBtnText}>Iniciar con Email</Text>
+            </Button>
         </Content>
       </Container>
     );

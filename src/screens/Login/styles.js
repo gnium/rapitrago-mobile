@@ -4,8 +4,21 @@ import color from "color";
 
 const commonColor = require("../../theme/variables/commonColor");
 const deviceWidth = Dimensions.get("window").width;
+const deviceHeight = Dimensions.get("window").height;
 
 export default {
+  mainContent: {
+    flex: 1,
+    minHeight: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  background: {
+    flex: 1,
+    width: null,
+    minHeight: deviceHeight,
+    backgroundColor: "#fff",
+  },
   container: {
     backgroundColor: commonColor.brandPrimary
   },
@@ -51,5 +64,19 @@ export default {
     marginHorizontal: 10,
     marginVertical: 20,
     backgroundColor: color(commonColor.brandPrimary).lighten(0.2).hex()
-  }
+  },
+  baseBtn: {
+    marginVertical: 7,
+    height: 50,
+    elevation: 0
+  },
+  baseBtnText: {
+    fontSize: 16
+  },
+  loginBtn: {
+    backgroundColor: commonColor.brandPrimary,
+  },
+  facebookBtn:{
+    backgroundColor: "#3b5998"
+  },
 };
