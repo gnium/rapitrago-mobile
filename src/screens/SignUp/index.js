@@ -1,19 +1,19 @@
 /* eslint-disable no-nested-ternary */
 // @flow
-import React, { Component } from 'react';
-import { Image, StatusBar, Alert, ScrollView } from 'react-native';
-import { Container, Content, Text, Button, Icon, Item, Input, View, Toast } from 'native-base';
-import { Form as FinalForm, Field } from 'react-final-form';
-import { FORM_ERROR } from 'final-form';
+import React, { Component } from "react";
+import { Image, StatusBar, Alert, ScrollView } from "react-native";
+import { Container, Content, Text, Button, Icon, Item, Input, View, Toast } from "native-base";
+import { Form as FinalForm, Field } from "react-final-form";
+import { FORM_ERROR } from "final-form";
 
-import connect from 'react-redux/es/connect/connect';
-import styles from './styles';
-import commonColor from '../../theme/variables/commonColor';
-import { createUser, errorSelector, renderErrors } from '../../modules/auth';
+import connect from "react-redux/es/connect/connect";
+import styles from "./styles";
+import commonColor from "../../theme/variables/commonColor";
+import { createUser, errorSelector, renderErrors } from "../../modules/auth";
 
-const logo = require('../../../assets/login-banner.png');
+const logo = require("../../../assets/login-banner.png");
 
-const required = value => (value ? undefined : 'Requerido');
+const required = value => (value ? undefined : "Requerido");
 const maxLength = max => value =>
   value && value.length > max ? `Debe contener ${max} caracteres como maximo` : undefined;
 const maxLength15 = maxLength(15);
@@ -24,10 +24,10 @@ const minLength4 = minLength(4);
 const minLength5 = minLength(5);
 const email = value =>
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? 'Formato de correo electrónico invalido'
+    ? "Formato de correo electrónico invalido"
     : undefined;
 const alphaNumeric = value =>
-  value && /[^a-zA-Z0-9áéíóúÁÉÍÓU ]/i.test(value) ? 'Solo caracteres alfanuméricos' : undefined;
+  value && /[^a-zA-Z0-9áéíóúÁÉÍÓU ]/i.test(value) ? "Solo caracteres alfanuméricos" : undefined;
 const composeValidators = (...validators) => value =>
   validators.reduce((error, validator) => error || validator(value), undefined);
 
@@ -50,15 +50,14 @@ class SignUpForm extends Component {
           <Icon
             active
             name={icon}
-            style={error && visited ? { color: commonColor.brandDanger } : { color: '#666' }}
+            style={error && visited ? { color: commonColor.brandDanger } : { color: "#666" }}
           />
           <Input
-            ref={c => (this.textInput = c)}
             placeholderTextColor="#666"
-            placeholder={placeholder || ''}
+            placeholder={placeholder || ""}
             style={hasErrors ? styles.invalidInput : styles.input}
-            keyboardType={input.name === 'email' ? 'email-address' : 'default'}
-            secureTextEntry={input.name === 'password'}
+            keyboardType={input.name === "email" ? "email-address" : "default"}
+            secureTextEntry={input.name === "password"}
             {...input}
           />
         </Item>
@@ -78,18 +77,18 @@ class SignUpForm extends Component {
       }
 
       Alert.alert(
-        '¡Cuenta creada con éxito!',
-        'Ahora solo debes confirmar tu correo electrónico. Verifica tu casilla de correo.',
-        [{ text: 'Aceptar', onPress: () => navigation.navigate('Login') }],
+        "¡Cuenta creada con éxito!",
+        "Ahora solo debes confirmar tu correo electrónico. Verifica tu casilla de correo.",
+        [{ text: "Aceptar", onPress: () => navigation.navigate("Login") }],
         { cancelable: false },
       );
     } else {
       Toast.show({
-        text: '¡Por favor, completa todos los campos!',
-        type: 'danger',
+        text: "¡Por favor, completa todos los campos!",
+        type: "danger",
         duration: 3000,
-        position: 'top',
-        textStyle: { textAlign: 'center', color: '#fff' },
+        position: "top",
+        textStyle: { textAlign: "center", color: "#fff" },
       });
     }
   };
@@ -99,16 +98,16 @@ class SignUpForm extends Component {
     const submissionErrors = this.errors.errors;
     renderErrorsFn();
     Toast.show({
-      text: 'No se pudo crear tu cuenta. Por favor, verifica los datos ingresados.',
-      type: 'danger',
+      text: "No se pudo crear tu cuenta. Por favor, verifica los datos ingresados.",
+      type: "danger",
       duration: 5000,
-      position: 'top',
-      textStyle: { textAlign: 'center', color: '#fff' },
+      position: "top",
+      textStyle: { textAlign: "center", color: "#fff" },
     });
     return { [FORM_ERROR]: submissionErrors };
   };
 
-  textInput: any;
+  
 
   render() {
     const { navigation } = this.props;
@@ -116,7 +115,7 @@ class SignUpForm extends Component {
       <Container style={styles.background}>
         <StatusBar backgroundColor={commonColor.statusBarColor} barStyle="light-content" />
         <Content contentContainerStyle={{ flex: 1 }} enableOnAndroid>
-          <ScrollView contentContainerStyle={{ minHeight: '100%' }}>
+          <ScrollView contentContainerStyle={{ minHeight: "100%" }}>
             <View style={styles.mainContainer}>
               <View style={styles.logoContainer}>
                 <Image source={logo} style={styles.logo} />
@@ -192,8 +191,8 @@ class SignUpForm extends Component {
                       <Button
                         small
                         transparent
-                        style={{ justifyContent: 'center', width: '100%' }}
-                        onPress={() => navigation.navigate('Login')}
+                        style={{ justifyContent: "center", width: "100%" }}
+                        onPress={() => navigation.navigate("Login")}
                         disabled={submitting}
                       >
                         <Text style={styles.actionSecondary}>Volver</Text>

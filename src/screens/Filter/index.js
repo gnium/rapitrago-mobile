@@ -91,6 +91,7 @@ class Filter extends Component {
                 <Col>
                   <TouchableOpacity style={styles.colLeftBtn}>
                     <CheckBox
+                      name="terms"
                       color={commonColor.contentTextColor}
                       checked={this.state.averageCost}
                       style={{ marginLeft: -12, marginRight: 8 }}

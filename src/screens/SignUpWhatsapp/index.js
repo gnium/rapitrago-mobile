@@ -53,7 +53,6 @@ class SignUpForm extends Component {
             style={error && visited ? { color: commonColor.brandDanger } : { color: '#666' }}
           />
           <Input
-            ref={c => (this.textInput = c)}
             placeholderTextColor="#666"
             placeholder={placeholder || ''}
             style={hasErrors ? styles.invalidInput : styles.input}
@@ -107,8 +106,6 @@ class SignUpForm extends Component {
     });
     return { [FORM_ERROR]: submissionErrors };
   };
-
-  textInput: any;
 
   render() {
     const { navigation } = this.props;
