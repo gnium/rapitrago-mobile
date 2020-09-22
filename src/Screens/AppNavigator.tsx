@@ -2,6 +2,7 @@ import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Splash from './Splash';
 import Verify from './Verify';
+import EmailVerify from './EmailVerify';
 import Login from './Login';
 import OtpVerify from './OtpVerify';
 import SignUp from './SignUp';
@@ -26,6 +27,7 @@ import LogOut from './LogOut';
 export type RootStackParamList = {
   Splash: undefined;
   Verify: undefined;
+  EmailVerify: undefined;
   Login: undefined;
   OtpVerify: undefined;
   SignUp: undefined;
@@ -82,6 +84,7 @@ const AppStack = () => {
     <RootStack.Navigator initialRouteName="Splash" headerMode={'none'}>
       <RootStack.Screen name="Splash" component={Splash} />
       <RootStack.Screen name="Verify" component={Verify} />
+      <RootStack.Screen name="EmailVerify" component={EmailVerify} />
       <RootStack.Screen name="Login" component={Login} />
       <RootStack.Screen name="OtpVerify" component={OtpVerify} />
       <RootStack.Screen name="SignUp" component={SignUp} />

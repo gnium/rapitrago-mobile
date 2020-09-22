@@ -10,6 +10,11 @@
 import React, {useEffect} from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import SplashScreen from 'react-native-splash-screen';
+//redux stuff
+import {Provider} from 'react-redux';
+import store from './src/redux/store';
+// import { CheckAuthentication } from "./src/utils/CheckAuthentication";
+
 import Stack from './src/Screens';
 
 declare const global: {HermesInternal: null | {}};
@@ -19,9 +24,13 @@ const App = () => {
     SplashScreen.hide();
   }, []);
   return (
-    <SafeAreaProvider>
-      <Stack />
-    </SafeAreaProvider>
+    <>
+      <Provider store={store}>
+        <SafeAreaProvider>
+          <Stack />
+        </SafeAreaProvider>
+      </Provider>
+    </>
   );
 };
 

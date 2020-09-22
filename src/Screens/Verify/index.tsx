@@ -42,6 +42,7 @@ const Verify: React.FC<Props> = (props) => {
       </View>
       <View style={styles.thirdView}>
         <View style={styles.fourthView}>
+        <Text style={styles.firstText} onPress={() => props.navigation.navigate('EmailVerify')}>Email Login</Text>
           <Text style={styles.firstText}>Right this way</Text>
           <Text style={styles.secondText}>
             Enter your mobile number to get started
