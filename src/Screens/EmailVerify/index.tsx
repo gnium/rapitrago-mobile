@@ -7,18 +7,17 @@ import {
   TextInput,
   KeyboardAvoidingView,
   Platform,
+  ActivityIndicator,
 } from 'react-native';
-import { Link, useHistory, useLocation } from 'react-router-dom';
 import Swiper from 'react-native-swiper';
 import {StackNavigationProp} from '@react-navigation/stack';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import constant from '../../utils/constant';
 import Button from '../../Components/Button';
 import {RootStackParamList} from '../AppNavigator';
 import styles from './styles';
 //redux stuff
-import {loginUser} from '../../redux/actions/userActions';
-
+import {loginUser} from '../../redux/actions/auth';
 const image = require('../../../assets/Artboard.png');
 
 interface Props {
@@ -27,6 +26,8 @@ interface Props {
 
 const EmailVerify: React.FC<Props> = (props: any) => {
   const dispatch = useDispatch();
+  let { auth } =  useSelector<any, any>((state) => state);
+  console.log(auth);
   const [password, setPassword] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const onChangePassword = (val: string) => {
@@ -51,13 +52,13 @@ const EmailVerify: React.FC<Props> = (props: any) => {
   }, [props?.UI])
   */
   const handleSubmit = (e: any) => {
-    e.preventDefault();
+    e?.preventDefault();
     setLoading(true);
     //your client side validation here
     //after success validation
     const userData = {
-      email: email,
-      password: password,
+      email_address: email,
+      secured_password: password,
     };
     dispatch(loginUser(userData, props.history));
   }
@@ -128,13 +129,11 @@ const EmailVerify: React.FC<Props> = (props: any) => {
                 style={styles.button}
                 onPress={(e: any) => {
                   handleSubmit(e);
-                  navigation.reset({
-                    index: 0,
-                    routes: [{name: 'Tabs'}],
-                  })}
-                }>
+                }}>
                 <Text style={styles.thirdText}>Login with Email</Text>
               </Button>
+              <Text>{auth?.loginError && <Text>Incorrect email or password.</Text>}</Text>
+              {loading? (<ActivityIndicator />) : null}
             </View>
           </View>
         </View>

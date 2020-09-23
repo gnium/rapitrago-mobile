@@ -24,13 +24,11 @@ const App = () => {
     SplashScreen.hide();
   }, []);
   return (
-    <>
-      <Provider store={store}>
-        <SafeAreaProvider>
-          <Stack />
-        </SafeAreaProvider>
-      </Provider>
-    </>
+    <Provider store={store}>
+      <SafeAreaProvider>
+        <Stack />
+      </SafeAreaProvider>
+    </Provider>
   );
 };
 

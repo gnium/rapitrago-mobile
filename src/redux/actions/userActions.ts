@@ -7,22 +7,24 @@ import {
   LOADING_USER,
 } from '../types';
 import axios from 'axios';
+import AsyncStorage from '@react-native-community/async-storage';
 
-export const loginUser = (userData: any, history: any) => (dispatch: any) => {
+export const loginUser = (userData: any) => (dispatch: any) => {
+  console.log(userData);
   dispatch({type: LOADING_UI});
   axios
-    .post('login', userData)
+    .post('http://localhost:3000/auth/login', userData)
     .then((res) => {
       const token = `Bearer ${res.data.token}`;
-      localStorage.setItem('token', `Bearer ${res.data.token}`); //setting token to local storage
+      AsyncStorage.setItem('token', `Bearer ${res.data.token}`); //setting token to local storage
       axios.defaults.headers.common['Authorization'] = token; //setting authorize token to header in axios
       dispatch(getUserData());
       dispatch({type: CLEAR_ERRORS});
       console.log('success');
-      history.push('/'); // redirecting to index page after login success
+      console.log(AsyncStorage.getItem('token'));
     })
     .catch((err) => {
-      console.log(err);
+      console.log('ERROR', err);
       dispatch({
         type: SET_ERRORS,
         payload: err.response.data,
@@ -31,6 +33,7 @@ export const loginUser = (userData: any, history: any) => (dispatch: any) => {
 };
 //for fetching authenticated user information
 export const getUserData = () => (dispatch: any) => {
+  console.log('GO HERE');
   dispatch({type: LOADING_USER});
   axios
     .get('/user')
