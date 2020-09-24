@@ -24,11 +24,7 @@ const store = createStore(
   reducer,
   initialState,
   compose(
-    applyMiddleware(...middleware),
-    // @ts-ignore
-    (window.__REDUX_DEVTOOLS_EXTENSION__ &&
-      // @ts-ignore
-      window.__REDUX_DEVTOOLS_EXTENSION__()) as any,
+    applyMiddleware(...middleware)
   ),
 );
 export default store;

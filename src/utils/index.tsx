@@ -5,6 +5,7 @@ import Geolocation from '@react-native-community/geolocation';
 import config from '../../config';
 
 export const fetchAddressFromCoordinatesAsync = async (region: any) => {
+  console.log('config.googleApiKey', config.googleApiKey);
   try {
     const loc = await fetch(
       `https:/maps.googleapis.com/maps/api/geocode/json?latlng=${region.latitude},${region.longitude}&key=${config.googleApiKey}`,
@@ -20,6 +21,7 @@ export const fetchAddressFromCoordinatesAsync = async (region: any) => {
 };
 
 export const fetchPrediction = async (queryString: string, region: any) => {
+  console.log('config.googleApiKey', config.googleApiKey);
   try {
     const url = `https://maps.googleapis.com/maps/api/place/queryautocomplete/json?key=${config.googleApiKey}&input=${queryString}&location=${region.latLong.latitude},${region.latLong.longitude}&radius=50000`;
     const callUrl = await fetch(url);
@@ -31,6 +33,7 @@ export const fetchPrediction = async (queryString: string, region: any) => {
 };
 
 export const fetchCoordinatesFromAddress = async (address: string) => {
+  console.log('config.googleApiKey', config.googleApiKey);
   const fetchCoords = await fetch(
     `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${config.googleApiKey}`,
     {
@@ -45,6 +48,7 @@ const getGpsLoc = () => {
   return new Promise((resolve) => {
     Geolocation.getCurrentPosition(async (info: any) => {
       const {coords} = info;
+      console.log('INFO', info);
       const resp = await fetchAddressFromCoordinatesAsync(coords);
       const response = {
         resp,
@@ -56,6 +60,8 @@ const getGpsLoc = () => {
 };
 
 export const checkPermission = async () => {
+  Geolocation.requestAuthorization();
+  Geolocation.getCurrentPosition(info => console.log(info));
   if (Platform.OS === 'ios') {
     const result = await request(PERMISSIONS.IOS.LOCATION_ALWAYS);
     if (result === 'granted') {

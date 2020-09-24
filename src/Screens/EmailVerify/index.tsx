@@ -34,6 +34,15 @@ const EmailVerify: React.FC<Props> = (props: any) => {
     setPassword(val);
   };
   
+  useEffect(() => {
+    if(auth?.isAuthenticated){
+      navigation.reset({
+        index: 0,
+        routes: [{name: 'Tabs'}],
+      })
+    }
+  }, [auth]);
+
   /**
    * PROPOSED LOGIN FLOW
    */

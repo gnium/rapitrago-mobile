@@ -93,6 +93,7 @@ export const loginUser = (userData: any) => (dispatch: any) => {
       dispatch({ type: AuthActionType.CLEAR_ERRORS });
       console.log('success');
       console.log(AsyncStorage.getItem('token'));
+      dispatch(receiveLogin(userData));
     })
     .catch((err: any) => {
       dispatch(loginError(err));

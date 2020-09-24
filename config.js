@@ -1,3 +1,3 @@
 export default {
-  googleApiKey: 'AIzaSyAnSyNvvVPZcykP0ki0BmJOBKcWqyThY54',
+  googleApiKey: 'AIzaSyA3uj1qxE_9vrVDbgA34wEJThI4NXxLdjA',
 };
