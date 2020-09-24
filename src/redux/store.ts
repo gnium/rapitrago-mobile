@@ -1,23 +1,32 @@
 import AsyncStorage from '@react-native-community/async-storage';
-import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
-import { createLogger } from 'redux-logger';
-import { persistStore, persistReducer } from 'redux-persist';
+import { combineReducers, applyMiddleware, compose} from 'redux';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER
+} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import { PersistGate } from 'redux-persist/integration/react'
 import thunk from 'redux-thunk';
-import auth from './reducers/auth';
+//import auth from './reducers/auth';
+import authentication from './reducers/authentication';
 import userReducer from './reducers/userReducer';
 import uiReducer from './reducers/uiReducer';
-const initialState = {};
-const middleware = [thunk];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   : compose;
-
 
 // Imports: Redux
 const rootReducer = combineReducers({
   user: userReducer, //user key ma store gareko
   UI: uiReducer,
-  auth
+  authentication 
 });
 
 
@@ -29,34 +38,27 @@ const persistConfig = {
   storage: AsyncStorage,
   // Whitelist (Save Specific Reducers)
   whitelist: [
-    'auth',
+    'authentication',
   ],
   // Blacklist (Don't Save Specific Reducers)
 };
 
-// Middleware: Redux Persist Persisted Reducer
+
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 const enhancer = composeEnhancers(applyMiddleware(thunk));
+const store = configureStore({
+  reducer: persistedReducer,
+  middleware: getDefaultMiddleware({
+    serializableCheck: {
+      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+    }
+  }).concat(thunk)
+})
 
-// store = createStore(rootReducer, persistedState, composeEnhancers(applyMiddleware(...middlewares)));
-// Redux: Store
-const store = createStore(
-  persistedReducer,
-  undefined,
-  enhancer
-);
-
-// Middleware: Redux Persist Persister
-let persistor = persistStore(store);
+let persistor = persistStore(store)
 
 // Exports
 export {
   store,
   persistor,
 };
-
-
-
-
-///////
-

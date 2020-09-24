@@ -19,7 +19,7 @@ import Button from '../../Components/Button';
 import {RootStackParamList} from '../AppNavigator';
 import styles from './styles';
 //redux stuff
-import {loginUser} from '../../redux/actions/auth';
+import {loginUser} from '../../redux/reducers/authentication';
 const image = require('../../../assets/Artboard.png');
 
 interface Props {
@@ -30,8 +30,8 @@ const EmailVerify: React.FC<Props> = (props: any) => {
   Geolocation.requestAuthorization();
   Geolocation.getCurrentPosition(info => console.log(info));
   const dispatch = useDispatch();
-  let { auth } =  useSelector<any, any>((state) => state);
-  console.log(auth);
+  let { authentication } =  useSelector<any, any>((state) => state);
+  console.log(authentication);
   const [password, setPassword] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const onChangePassword = (val: string) => {
@@ -39,13 +39,13 @@ const EmailVerify: React.FC<Props> = (props: any) => {
   };
   
   useEffect(() => {
-    if(auth?.isAuthenticated){
+    if(authentication?.isAuthenticated){
       navigation.reset({
         index: 0,
         routes: [{name: 'Tabs'}],
       })
     }
-  }, [auth]);
+  }, [authentication]);
 
   /**
    * PROPOSED LOGIN FLOW
@@ -145,7 +145,7 @@ const EmailVerify: React.FC<Props> = (props: any) => {
                 }}>
                 <Text style={styles.thirdText}>Login with Email</Text>
               </Button>
-              <Text>{auth?.loginError && <Text>Incorrect email or password.</Text>}</Text>
+              <Text>{authentication?.loginError && <Text>Incorrect email or password.</Text>}</Text>
               {loading? (<ActivityIndicator />) : null}
             </View>
           </View>
