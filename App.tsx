@@ -12,7 +12,8 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import SplashScreen from 'react-native-splash-screen';
 //redux stuff
 import {Provider} from 'react-redux';
-import store from './src/redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import {store, persistor} from './src/redux/store';
 // import { CheckAuthentication } from "./src/utils/CheckAuthentication";
 
 import Stack from './src/Screens';
@@ -25,9 +26,11 @@ const App = () => {
   }, []);
   return (
     <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
       <SafeAreaProvider>
         <Stack />
       </SafeAreaProvider>
+      </PersistGate>
     </Provider>
   );
 };

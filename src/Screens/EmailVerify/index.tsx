@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import {StackNavigationProp} from '@react-navigation/stack';
+import Geolocation from '@react-native-community/geolocation';
+
 import { useDispatch, useSelector } from "react-redux";
 import constant from '../../utils/constant';
 import Button from '../../Components/Button';
@@ -25,6 +27,8 @@ interface Props {
 }
 
 const EmailVerify: React.FC<Props> = (props: any) => {
+  Geolocation.requestAuthorization();
+  Geolocation.getCurrentPosition(info => console.log(info));
   const dispatch = useDispatch();
   let { auth } =  useSelector<any, any>((state) => state);
   console.log(auth);

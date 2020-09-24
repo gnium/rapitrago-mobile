@@ -2,15 +2,6 @@ import { Dispatch } from "redux";
 import AsyncStorage from '@react-native-community/async-storage';
 import axios from 'axios';
 
-import {
-  SET_USER,
-  SET_ERRORS,
-  LOADING_UI,
-  CLEAR_ERRORS,
-  SET_UNAUTHENTICATED,
-  LOADING_USER,
-} from '../types';
-
 export enum AuthActionType {
   LOGIN_REQUEST = "LOGIN_REQUEST",
   LOGIN_SUCCESS = "LOGIN_SUCCESS",
@@ -24,7 +15,75 @@ export enum AuthActionType {
   SET_ERRORS = 'SET_ERRORS',
   LOADING_UI = 'LOADING_UI',
   CLEAR_ERRORS = 'CLEAR_ERRORS',
+  GET_TOKEN = 'GET_TOKEN',
+  SAVE_TOKEN = 'SAVE_TOKEN',
+  REMOVE_TOKEN = 'REMOVE_TOKEN',
+  ERROR = 'ERROR',
+  LOADING = 'LOADING',
 }
+
+
+export const getToken = (token: string) => ({
+  type: 'GET_TOKEN',
+  token,
+});
+
+export const saveToken = (token: string) => ({
+  type: 'SAVE_TOKEN',
+  token
+});
+
+export const removeToken = () => ({
+  type: 'REMOVE_TOKEN',
+});
+
+export const loading = (bool: boolean) => ({
+  type: 'LOADING',
+  isLoading: bool,
+});
+
+export const error = (error: any) => ({
+  type: 'ERROR',
+  error,
+});
+
+
+
+export const getUserToken = () => (dispatch: Dispatch) =>
+
+  AsyncStorage.getItem('userToken')
+    .then((data) => {
+      dispatch(loading(false));
+      dispatch(getToken(data));
+    })
+    .catch((err) => {
+      dispatch(loading(false));
+      dispatch(error(err.message || 'ERROR'));
+    })
+
+
+
+export const saveUserToken = (data: any) => (dispatch: Dispatch) =>
+  AsyncStorage.setItem('userToken', 'abc')
+    .then((data) => {
+      dispatch(loading(false));
+      dispatch(saveToken('token saved'));
+    })
+    .catch((err) => {
+      dispatch(loading(false));
+      dispatch(error(err.message || 'ERROR'));
+    })
+
+export const removeUserToken = () => (dispatch: Dispatch) =>
+  AsyncStorage.removeItem('userToken')
+    .then((data) => {
+      dispatch(loading(false));
+      dispatch(removeToken());
+    })
+    .catch((err) => {
+      dispatch(loading(false));
+      dispatch(error(err.message || 'ERROR'));
+    })
 
 const requestLogin = () =>
   ({
