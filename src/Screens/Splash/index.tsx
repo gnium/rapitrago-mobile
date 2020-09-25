@@ -13,8 +13,8 @@ import Button from '../../Components/Button';
 import styles from './styles';
 import {RootStackParamList} from '../AppNavigator';
 import constant from '../../utils/constant';
-const image = require('../../../assets/background.png');
-const icon = require('../../../assets/icon-fd.png');
+const image = require('../../../assets/splash.png');
+const icon = require('../../../assets/rapitrago-icon.png');
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
