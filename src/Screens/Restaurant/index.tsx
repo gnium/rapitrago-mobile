@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import Modal from 'react-native-modal';
+import { useDispatch, useSelector } from "react-redux";
 
 import {checkPermission} from '../../utils';
 import RestaurantCard from '../../Components/RestaurantCard';
@@ -19,6 +20,7 @@ import constant from '../../utils/constant';
 import CategoriesCard from '../../Components/CategoriesCard';
 import SearchLocation from '../../Components/SearchLocation';
 import styles from './styles';
+import { getMerchants } from '../../redux/module/merchants';
 
 const locIcon = require('../../../assets/placeholder.png');
 const searchIcon = require('../../../assets/search.png');
@@ -29,6 +31,8 @@ interface Props {
 }
 
 const Restaurants: React.FC<Props> = (props) => {
+  const dispatch = useDispatch();
+  dispatch(getMerchants());
   const [address, setAddress] = useState<string>('');
   const [gpsLoc, setGpsLoc] = useState<any>(null);
   const [visible, setVisible] = useState<boolean>(false);

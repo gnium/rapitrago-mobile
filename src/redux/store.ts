@@ -15,18 +15,18 @@ import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react'
 import thunk from 'redux-thunk';
 //import auth from './reducers/auth';
-import authentication from './reducers/authentication';
-import userReducer from './reducers/userReducer';
-import uiReducer from './reducers/uiReducer';
+import authentication from './module/authentication';
+import merchants from './module/merchants';
+import uiReducer from './module/uiReducer';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   : compose;
 
 // Imports: Redux
 const rootReducer = combineReducers({
-  user: userReducer, //user key ma store gareko
   UI: uiReducer,
-  authentication 
+  authentication,
+  merchants
 });
 
 

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import AsyncStorage from '@react-native-community/async-storage';
 import axios from 'axios';
+import { LOGIN_URL } from '../../../env.json';
 
 
 // Slice
@@ -36,6 +37,9 @@ const slice = createSlice({
     loginError: (state, action) => {
         state.loading = false;
         state.errors = action.payload;
+    },
+    setToken: (state, action) => {
+        state.token = action.payload;
     }
   },
 });
@@ -44,16 +48,17 @@ export default slice.reducer
 
 // Actions
 
-const { requestLogin, clearErrors, receiveLogin, loginError } = slice.actions
+const { requestLogin, clearErrors, receiveLogin, loginError, setToken } = slice.actions
 
 export const loginUser = (userData: any) =>  async (dispatch: any)  => {
     dispatch(requestLogin());
     axios
-      .post('http://localhost:3000/auth/login', userData)
+      .post(LOGIN_URL, userData)
       .then((res) => {
         const token = `Bearer ${res.data.token}`;
         AsyncStorage.setItem('token', `Bearer ${res.data.token}`); //setting token to local storage
         axios.defaults.headers.common['Authorization'] = token; //setting authorize token to header in axios
+        dispatch(setToken(res.data.token));
         dispatch(clearErrors());
         console.log(AsyncStorage.getItem('token'));
         dispatch(receiveLogin(userData));

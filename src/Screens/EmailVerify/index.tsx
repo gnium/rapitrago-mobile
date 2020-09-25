@@ -19,7 +19,7 @@ import Button from '../../Components/Button';
 import {RootStackParamList} from '../AppNavigator';
 import styles from './styles';
 //redux stuff
-import {loginUser} from '../../redux/reducers/authentication';
+import {loginUser} from '../../redux/module/authentication';
 const image = require('../../../assets/Artboard.png');
 
 interface Props {
