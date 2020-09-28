@@ -1,13 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
-import AsyncStorage from '@react-native-community/async-storage';
-import axios from 'axios';
-import { LOGIN_URL } from '../../../env.json';
+import { createSlice } from "@reduxjs/toolkit";
+import AsyncStorage from "@react-native-community/async-storage";
+import axios from "axios";
+import { LOGIN_URL } from "../../../env.json";
 
 
 // Slice
 
 const slice = createSlice({
-  name: 'authentication',
+  name: "authentication",
   initialState: {
     isLoggingIn: false,
     isLoggingOut: false,
@@ -56,11 +56,11 @@ export const loginUser = (userData: any) =>  async (dispatch: any)  => {
       .post(LOGIN_URL, userData)
       .then((res) => {
         const token = `Bearer ${res.data.token}`;
-        AsyncStorage.setItem('token', `Bearer ${res.data.token}`); //setting token to local storage
-        axios.defaults.headers.common['Authorization'] = token; //setting authorize token to header in axios
+        AsyncStorage.setItem("token", `Bearer ${res.data.token}`); //setting token to local storage
+        axios.defaults.headers.common["Authorization"] = token; //setting authorize token to header in axios
         dispatch(setToken(res.data.token));
         dispatch(clearErrors());
-        console.log(AsyncStorage.getItem('token'));
+        console.log(AsyncStorage.getItem("token"));
         dispatch(receiveLogin(userData));
       })
       .catch((err: any) => {

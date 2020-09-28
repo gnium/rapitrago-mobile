@@ -28,12 +28,14 @@
     "react/destructuring-assignment": "off",
     "react/no-did-update-set-state": "off",
     "react/jsx-props-no-spreading": "off",
+    "react/static-property-placement": [2, "static public field"],
     "quotes": "off",
     "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/quotes": ["error", "double"],
     "max-len": [2, { "code": 120, "ignoreUrls": true }],
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "react/jsx-no-bind": "off"
   }
 }

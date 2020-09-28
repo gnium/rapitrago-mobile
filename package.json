@@ -14,7 +14,6 @@
     "ios": "yarn env:dev && yarn _ios",
     "ios:staging": "yarn env:staging && yarn _ios",
     "ios:prod": "yarn env:prod && yarn _ios",
-    
     "_build:ios": "react-native bundle --platform ios ...",
     "build:ios": "yarn env:dev && yarn _build:ios",
     "build:ios:staging": "yarn env:staging && yarn _build:ios",
@@ -70,13 +69,22 @@
     "@typescript-eslint/parser": "^2.27.0",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
+    "eslint-config-airbnb-typescript": "^11.0.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^4.3.0",
     "jest": "^24.9.0",
+    "lint-staged": "^10.4.0",
     "metro-react-native-babel-preset": "^0.58.0",
     "prettier": "^2.0.4",
     "react-test-renderer": "16.11.0",
     "redux-logger": "^3.0.6",
     "redux-tools": "^3.2.0",
-    "typescript": "^3.8.3"
+    "typescript": "^4.0.3"
   },
   "jest": {
     "preset": "react-native",
