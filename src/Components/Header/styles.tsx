@@ -1,13 +1,13 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 export default StyleSheet.create({
   firstView: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   secondView: {
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   backIcon: {
     height: 20,
@@ -16,13 +16,13 @@ export default StyleSheet.create({
   },
   firstText: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: constant.thirdTextColor,
     left: -20,
   },
   thirdView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

@@ -1,9 +1,10 @@
-import * as React from 'react';
-import {View, Text, Image, TouchableWithoutFeedback} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import * as React from "react";
+import {View, Text, Image, TouchableWithoutFeedback} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../../Screens/AppNavigator';
-import styles from './styles';
+import {RootStackParamList} from "../../Screens/AppNavigator";
+import styles from "./styles";
+
 interface Props {
   details: details;
   navigation: StackNavigationProp<RootStackParamList>;
@@ -16,12 +17,12 @@ interface details {
   rating: number;
   ratingNo: string;
 }
-const starIcon = require('../../../assets/start.png');
+const starIcon = require("../../../assets/start.png");
 
 const CardDetails: React.FC<Props> = (props) => {
   const {details, navigation} = props;
   return (
-    <TouchableWithoutFeedback onPress={() => navigation.navigate('MenuList')}>
+    <TouchableWithoutFeedback onPress={() => navigation.navigate("MenuList")}>
       <View style={styles.firstView}>
         <Image source={details.img} style={styles.image} />
         <Text style={styles.firstText}>{details.name}</Text>

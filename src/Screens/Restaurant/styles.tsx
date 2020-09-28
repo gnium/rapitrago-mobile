@@ -1,6 +1,6 @@
-import {StyleSheet, Platform} from 'react-native';
+import {StyleSheet, Platform} from "react-native";
 
-import constant from '../../utils/constant';
+import constant from "../../utils/constant";
 
 const {height, heightRatio} = constant.styleGuide;
 const iphoneX = height > 811;
@@ -18,7 +18,7 @@ export default StyleSheet.create({
   secondView: {
     flex: 1,
     top: 20,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   firstIcon: {
     height: 20,
@@ -28,16 +28,16 @@ export default StyleSheet.create({
     left: 5,
     fontSize: 16,
     color: constant.thirdTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   thirdView: {
     height: 35,
     width: 35,
     borderRadius: 17.5,
     backgroundColor: constant.paymentBackGround,
-    justifyContent: 'center',
-    alignItems: 'center',
-    left: Platform.OS === 'android' ? 25 : 30 * heightRatio,
+    justifyContent: "center",
+    alignItems: "center",
+    left: Platform.OS === "android" ? 25 : 30 * heightRatio,
     bottom: 5,
   },
   secondIcon: {
@@ -45,13 +45,13 @@ export default StyleSheet.create({
     width: 15,
   },
   fourthView: {
-    left: Platform.OS === 'android' ? 32 : 35 * heightRatio,
+    left: Platform.OS === "android" ? 32 : 35 * heightRatio,
     bottom: 5,
   },
   thirdIcon: {
     height: 35,
     width: 35,
-    position: 'absolute',
+    position: "absolute",
   },
   fifthView: {
     flex: iphoneX ? 1.8 : 2.2,
@@ -60,8 +60,8 @@ export default StyleSheet.create({
     flex: iphoneX ? 1 : 1.45,
   },
   seventhView: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginRight: 60,
     marginLeft: 15,
     paddingTop: 30 * heightRatio,
@@ -69,20 +69,20 @@ export default StyleSheet.create({
   secondText: {
     fontSize: 16 * heightRatio,
     color: constant.thirdTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   thirdText: {
     fontSize: 16,
     color: constant.thirdTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   eightView: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   searchView: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
+    flexDirection: "row",
+    justifyContent: "flex-end",
     right: 80,
   },
 });

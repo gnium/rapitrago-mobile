@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Image,
   TextInput,
   SafeAreaView,
   TouchableWithoutFeedback,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import styles from './styles';
-import constant from '../../utils/constant';
+import {RootStackParamList} from "../AppNavigator";
+import styles from "./styles";
+import constant from "../../utils/constant";
 
-const backIcon = require('../../../assets/back.png');
-const searchIcon = require('../../../assets/search.png');
+const backIcon = require("../../../assets/back.png");
+const searchIcon = require("../../../assets/search.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;

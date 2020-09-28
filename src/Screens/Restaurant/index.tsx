@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from "react";
 import {
   View,
   Text,
@@ -8,23 +8,23 @@ import {
   ScrollView,
   TouchableWithoutFeedback,
   TouchableOpacity,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import Modal from 'react-native-modal';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
+import Modal from "react-native-modal";
 import { useDispatch, useSelector } from "react-redux";
 
-import {checkPermission} from '../../utils';
-import RestaurantCard from '../../Components/RestaurantCard';
-import {RootStackParamList} from '../AppNavigator';
-import constant from '../../utils/constant';
-import CategoriesCard from '../../Components/CategoriesCard';
-import SearchLocation from '../../Components/SearchLocation';
-import styles from './styles';
-import { getMerchants } from '../../redux/module/merchants';
+import {checkPermission} from "../../utils";
+import RestaurantCard from "../../Components/RestaurantCard";
+import {RootStackParamList} from "../AppNavigator";
+import constant from "../../utils/constant";
+import CategoriesCard from "../../Components/CategoriesCard";
+import SearchLocation from "../../Components/SearchLocation";
+import styles from "./styles";
+import { getMerchants } from "../../redux/module/merchants";
 
-const locIcon = require('../../../assets/placeholder.png');
-const searchIcon = require('../../../assets/search.png');
-const filterIcon = require('../../../assets/filter.png');
+const locIcon = require("../../../assets/placeholder.png");
+const searchIcon = require("../../../assets/search.png");
+const filterIcon = require("../../../assets/filter.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -33,7 +33,7 @@ interface Props {
 const Restaurants: React.FC<Props> = (props) => {
   const dispatch = useDispatch();
   dispatch(getMerchants());
-  const [address, setAddress] = useState<string>('');
+  const [address, setAddress] = useState<string>("");
   const [gpsLoc, setGpsLoc] = useState<any>(null);
   const [visible, setVisible] = useState<boolean>(false);
   useEffect(() => {
@@ -43,7 +43,7 @@ const Restaurants: React.FC<Props> = (props) => {
         setGpsLoc(resp.coords);
         setAddress(resp.resp.formatted_address);
       } else {
-        setAddress('Select Address');
+        setAddress("Select Address");
       }
     };
     permission();
@@ -75,7 +75,7 @@ const Restaurants: React.FC<Props> = (props) => {
             </TouchableOpacity>
             <View style={styles.searchView}>
               <TouchableWithoutFeedback
-                onPress={() => navigation.navigate('Search')}>
+                onPress={() => navigation.navigate("Search")}>
                 <View style={styles.thirdView}>
                   <Image
                     source={searchIcon}
@@ -86,7 +86,7 @@ const Restaurants: React.FC<Props> = (props) => {
               </TouchableWithoutFeedback>
               <View style={styles.fourthView}>
                 <TouchableWithoutFeedback
-                  onPress={() => navigation.navigate('Filter')}>
+                  onPress={() => navigation.navigate("Filter")}>
                   <Image
                     source={filterIcon}
                     style={styles.thirdIcon}

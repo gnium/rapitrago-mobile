@@ -1,5 +1,6 @@
-import {StyleSheet, Platform} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet, Platform} from "react-native";
+import constant from "../../utils/constant";
+
 const {width, heightRatio} = constant.styleGuide;
 
 export default StyleSheet.create({
@@ -12,13 +13,13 @@ export default StyleSheet.create({
     top: 10,
   },
   secondView: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     paddingTop: 20,
   },
   firstText: {
     fontSize: 16,
-    fontWeight: '400',
+    fontWeight: "400",
     color: constant.blackColor,
     marginLeft: 20,
   },
@@ -37,35 +38,35 @@ export default StyleSheet.create({
     marginTop: 18,
     backgroundColor: constant.backColor,
     borderRadius: 5,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   textInput: {
     width: width - 80,
     left: 20,
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.secondaryTextColor,
   },
   fifthView: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   button: {
     height: 50,
     width: 320,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     bottom: 20,
   },
   secondText: {
     color: constant.commonColor,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   keyboardView: {
     flex: 1,
-    marginTop: Platform.OS === 'ios' ? -20 * heightRatio : 0,
+    marginTop: Platform.OS === "ios" ? -20 * heightRatio : 0,
   },
 });

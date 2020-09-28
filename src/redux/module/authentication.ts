@@ -56,8 +56,8 @@ export const loginUser = (userData: any) =>  async (dispatch: any)  => {
       .post(LOGIN_URL, userData)
       .then((res) => {
         const token = `Bearer ${res.data.token}`;
-        AsyncStorage.setItem("token", `Bearer ${res.data.token}`); //setting token to local storage
-        axios.defaults.headers.common["Authorization"] = token; //setting authorize token to header in axios
+        AsyncStorage.setItem("token", `Bearer ${res.data.token}`); // setting token to local storage
+        axios.defaults.headers.common.Authorization = token; // setting authorize token to header in axios
         dispatch(setToken(res.data.token));
         dispatch(clearErrors());
         console.log(AsyncStorage.getItem("token"));

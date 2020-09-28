@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {width, heightRatio} = constant.styleGuide;
 
@@ -23,36 +23,36 @@ export default StyleSheet.create({
     width: 60,
     borderWidth: 0.5,
     marginTop: 15 * heightRatio,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
   },
   firstText: {
     fontSize: 14,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: constant.thirdTextColor,
   },
   secondText: {
     fontSize: 12,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   fourthView: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   button: {
     height: 50,
     width: width - 70,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     bottom: 20,
   },
   thirdText: {
     color: constant.commonColor,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

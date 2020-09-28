@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height, width} = constant.styleGuide;
 
@@ -19,6 +19,6 @@ export default StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: width,
+    width,
   },
 });

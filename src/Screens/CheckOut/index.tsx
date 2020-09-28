@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -6,18 +6,18 @@ import {
   Image,
   FlatList,
   TouchableWithoutFeedback,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {SafeAreaView} from 'react-native-safe-area-context';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
+import {SafeAreaView} from "react-native-safe-area-context";
 
-import styles from './styles';
-import Button from '../../Components/Button';
-import {RootStackParamList} from '../AppNavigator';
+import styles from "./styles";
+import Button from "../../Components/Button";
+import {RootStackParamList} from "../AppNavigator";
 
-const backIcon = require('../../../assets/back.png');
-const tickIcon = require('../../../assets/checked.png');
-const visaIcon = require('../../../assets/visa.png');
-const masIcon = require('../../../assets/mastercard.png');
+const backIcon = require("../../../assets/back.png");
+const tickIcon = require("../../../assets/checked.png");
+const visaIcon = require("../../../assets/visa.png");
+const masIcon = require("../../../assets/mastercard.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -26,14 +26,14 @@ interface Props {
 const CheckOut: React.FC<Props> = (props) => {
   const [cards] = useState<any>([
     {
-      id: '1',
-      name: 'Visa',
-      cardNo: '**** **** **** 1000',
+      id: "1",
+      name: "Visa",
+      cardNo: "**** **** **** 1000",
     },
     {
-      id: '2',
-      name: 'Master',
-      cardNo: '**** **** **** 3456',
+      id: "2",
+      name: "Master",
+      cardNo: "**** **** **** 3456",
     },
   ]);
   const [selectCardId, setSelectCardId] = useState<string>();
@@ -95,7 +95,7 @@ const CheckOut: React.FC<Props> = (props) => {
                         : styles.activeNinthView
                     }>
                     <View style={styles.eleventhView}>
-                      {item.name === 'Visa' ? (
+                      {item.name === "Visa" ? (
                         <Image
                           source={visaIcon}
                           style={styles.cardIcon}
@@ -133,7 +133,7 @@ const CheckOut: React.FC<Props> = (props) => {
           <View style={styles.buttonView}>
             <Button
               style={styles.button}
-              onPress={() => navigation.navigate('DoneOrder')}>
+              onPress={() => navigation.navigate("DoneOrder")}>
               <Text style={styles.buttonText}>Pay</Text>
             </Button>
           </View>

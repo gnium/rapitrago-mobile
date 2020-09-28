@@ -1,11 +1,11 @@
-import * as React from 'react';
-import {View, Text, FlatList} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import * as React from "react";
+import {View, Text, FlatList} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import styles from './styles';
-import {resDetails} from '../../Data/data';
-import {RootStackParamList} from '../../Screens/AppNavigator';
-import CardDetails from '../CardDetails';
+import styles from "./styles";
+import {resDetails} from "../../Data/data";
+import {RootStackParamList} from "../../Screens/AppNavigator";
+import CardDetails from "../CardDetails";
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;

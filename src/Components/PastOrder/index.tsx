@@ -1,10 +1,11 @@
-import React from 'react';
-import {View, Text, Image, FlatList, SafeAreaView} from 'react-native';
-import {pastOrders} from '../../Data/data';
-import Button from '../Button';
+import React from "react";
+import {View, Text, Image, FlatList, SafeAreaView} from "react-native";
+import {pastOrders} from "../../Data/data";
+import Button from "../Button";
 
-import styles from './styles';
-const mapPoint = require('../../../assets/placeholder.png');
+import styles from "./styles";
+
+const mapPoint = require("../../../assets/placeholder.png");
 
 const PastOrder: React.FC = () => {
   return (
@@ -60,7 +61,7 @@ const PastOrder: React.FC = () => {
                   );
                 })}
                 <Button
-                  onPress={() => console.log('pressed')}
+                  onPress={() => console.log("pressed")}
                   style={styles.button}>
                   <Text style={styles.buttonText}>Re-order</Text>
                 </Button>

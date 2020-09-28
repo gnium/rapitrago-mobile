@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Image,
   TouchableWithoutFeedback,
   TextInput,
   Text,
-} from 'react-native';
+} from "react-native";
 import CountryPicker, {
   FlagButton,
   CountryCode,
   Country,
-} from 'react-native-country-picker-modal';
-import constant from '../../utils/constant';
-import styles from './styles';
+} from "react-native-country-picker-modal";
+import constant from "../../utils/constant";
+import styles from "./styles";
 
-const dropDown = require('../../../assets/dropdown.png');
+const dropDown = require("../../../assets/dropdown.png");
 
 interface Props {
   enableEvent: string;
@@ -23,9 +23,9 @@ interface Props {
 
 const PhoneInput: React.FC<Props> = (props) => {
   const [openModal, setOpenModal] = useState<boolean>(false);
-  const [code, setCode] = useState<CountryCode>('IN');
-  const [number, setNumber] = useState<string>('');
-  const [callingCode, setCallingCode] = useState<string>('91');
+  const [code, setCode] = useState<CountryCode>("IN");
+  const [number, setNumber] = useState<string>("");
+  const [callingCode, setCallingCode] = useState<string>("91");
   const onSelect = (country: Country) => {
     setCode(country.cca2);
     setCallingCode(country.callingCode[0]);
@@ -35,15 +35,15 @@ const PhoneInput: React.FC<Props> = (props) => {
     <View style={styles.firstView} pointerEvents={enableEvent}>
       <View style={styles.secondView}>
         <FlagButton
-          withEmoji={true}
+          withEmoji
           countryCode={code}
           onOpen={() => setOpenModal(true)}
         />
         <CountryPicker
           onSelect={onSelect}
-          withEmoji={true}
-          withFilter={true}
-          withFlag={true}
+          withEmoji
+          withFilter
+          withFlag
           placeholder
           visible={openModal}
           onClose={() => setOpenModal(false)}
@@ -62,7 +62,7 @@ const PhoneInput: React.FC<Props> = (props) => {
           autoFocus={focus}
           selectionColor={constant.thirdTextColor}
           style={styles.textInput}
-          keyboardType={'number-pad'}
+          keyboardType="number-pad"
         />
       </View>
     </View>

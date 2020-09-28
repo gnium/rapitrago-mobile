@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height} = constant.styleGuide;
 const iphoneX = height > 811;
@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   secondView: {
     flex: iphoneX ? 0.5 : 0.4,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   icon: {
     height: 15,
@@ -20,7 +20,7 @@ export default StyleSheet.create({
   },
   thirdView: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
   },
   firstText: {
     fontSize: 28,

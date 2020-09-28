@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Text,
   View,
@@ -6,15 +6,16 @@ import {
   Image,
   ImageBackground,
   StatusBar,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import Button from '../../Components/Button';
-import styles from './styles';
-import {RootStackParamList} from '../AppNavigator';
-import constant from '../../utils/constant';
-const image = require('../../../assets/splash.png');
-const icon = require('../../../assets/rapitrago-icon.png');
+import Button from "../../Components/Button";
+import styles from "./styles";
+import {RootStackParamList} from "../AppNavigator";
+import constant from "../../utils/constant";
+
+const image = require("../../../assets/splash.png");
+const icon = require("../../../assets/rapitrago-icon.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -40,11 +41,11 @@ const Splash: React.FC<Props> = (props) => {
           <View style={styles.thirdView}>
             <Button
               style={styles.fourthView}
-              onPress={() => navigation.navigate('Verify')}>
+              onPress={() => navigation.navigate("Verify")}>
               <Text style={styles.sixthText}>Get Started</Text>
             </Button>
             <TouchableWithoutFeedback
-              onPress={() => navigation.navigate('Verify')}>
+              onPress={() => navigation.navigate("Verify")}>
               <View style={styles.fifthView}>
                 <Text style={styles.fourthText}>Have an account? </Text>
                 <Text style={styles.fifthText}>Login </Text>

@@ -1,6 +1,6 @@
-import {StyleSheet, Platform} from 'react-native';
+import {StyleSheet, Platform} from "react-native";
 
-import constant from '../../utils/constant';
+import constant from "../../utils/constant";
 
 const {height} = constant.styleGuide;
 
@@ -13,12 +13,12 @@ export default StyleSheet.create({
   },
   firstView: {
     flex: 1,
-    paddingBottom: Platform.OS === 'android' ? 30 : 0,
+    paddingBottom: Platform.OS === "android" ? 30 : 0,
   },
   firstText: {
     fontSize: 28,
     color: constant.thirdTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   secondView: {
     flex: 0.4,
@@ -27,7 +27,7 @@ export default StyleSheet.create({
     top: 12,
     color: constant.thirdTextColor,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   thirdView: {
     left: 15,
@@ -41,8 +41,8 @@ export default StyleSheet.create({
     height: 50,
     width: 300,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     marginTop: 50,
   },
@@ -58,15 +58,15 @@ export default StyleSheet.create({
   },
   eightView: {
     flex: 3,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   ninthView: {
-    alignItems: 'center',
+    alignItems: "center",
     bottom: iphoneX ? 10 : 40,
   },
   thirdText: {
     fontSize: 18,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.commonColor,
   },
 });

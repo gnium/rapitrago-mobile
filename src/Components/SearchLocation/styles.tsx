@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height, width, heightRatio} = constant.styleGuide;
 const iphoneX = height > 811;
@@ -9,7 +9,7 @@ export default StyleSheet.create({
     height: iphoneX ? height - 290 * heightRatio : height - 250,
     backgroundColor: constant.commonColor,
     top: 250,
-    width: width,
+    width,
     left: -20,
   },
   secondView: {
@@ -21,14 +21,14 @@ export default StyleSheet.create({
     top: 30,
     borderRadius: 5,
     backgroundColor: constant.backColor,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   fourthView: {
-    justifyContent: 'center',
+    justifyContent: "center",
     left: 10,
   },
   fifthView: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   firstIcon: {
     height: 15,
@@ -38,7 +38,7 @@ export default StyleSheet.create({
     left: 25,
     width: width - 150,
     color: constant.thirdTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
     fontSize: 14,
   },
   sixthView: {
@@ -50,11 +50,11 @@ export default StyleSheet.create({
   seventhView: {
     height: 50,
     borderBottomWidth: 0.4,
-    justifyContent: 'center',
+    justifyContent: "center",
     borderBottomColor: constant.lightText,
   },
   firstText: {
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.loc,
   },
   eightView: {
@@ -67,11 +67,11 @@ export default StyleSheet.create({
     borderBottomWidth: 0.5,
     borderBottomColor: constant.lightText,
     height: 45,
-    alignItems: 'center',
-    flexDirection: 'row',
+    alignItems: "center",
+    flexDirection: "row",
   },
   secondText: {
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.loc,
     fontSize: 14,
     left: 10,
@@ -85,12 +85,12 @@ export default StyleSheet.create({
     top: 20,
   },
   thirdText: {
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
     fontSize: 14,
   },
   twelvethView: {
-    flexDirection: 'row',
+    flexDirection: "row",
     top: 15,
     borderBottomWidth: 0.5,
     borderBottomColor: constant.lightText,
@@ -104,6 +104,6 @@ export default StyleSheet.create({
     color: constant.loc,
     left: 5,
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
   },
 });

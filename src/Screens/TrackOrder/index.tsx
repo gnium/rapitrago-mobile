@@ -1,19 +1,19 @@
-import React, {useRef} from 'react';
-import {View, SafeAreaView, StatusBar, Image, Text} from 'react-native';
-import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-import MapViewDirections from 'react-native-maps-directions';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React, {useRef} from "react";
+import {View, SafeAreaView, StatusBar, Image, Text} from "react-native";
+import MapView, {PROVIDER_GOOGLE, Marker} from "react-native-maps";
+import MapViewDirections from "react-native-maps-directions";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import constant from '../../utils/constant';
-import mapStyle from '../../utils/customMap';
-import config from '../../../config';
-import Header from '../../Components/Header';
-import styles from './styles';
+import {RootStackParamList} from "../AppNavigator";
+import constant from "../../utils/constant";
+import mapStyle from "../../utils/customMap";
+import config from "../../../config";
+import Header from "../../Components/Header";
+import styles from "./styles";
 
-const homeIcon = require('../../../assets/home-white.png');
-const locIcon = require('../../../assets/mapPointer-white.png');
-const resType = require('../../../assets/profile.png');
+const homeIcon = require("../../../assets/home-white.png");
+const locIcon = require("../../../assets/mapPointer-white.png");
+const resType = require("../../../assets/profile.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -35,14 +35,14 @@ const TrackOrder: React.FC<Props> = (props) => {
   };
   const markers = [
     {
-      titl: 'src',
+      titl: "src",
       coordinate: {
         latitude: region.latitude,
         longitude: region.longitude,
       },
     },
     {
-      titl: 'dest',
+      titl: "dest",
       coordinate: {
         latitude: destLoc.latitude,
         longitude: destLoc.longitude,
@@ -106,7 +106,7 @@ const TrackOrder: React.FC<Props> = (props) => {
             origin={region}
             destination={destLoc}
             strokeWidth={2}
-            optimizeWaypoints={true}
+            optimizeWaypoints
             strokeColor={constant.primaryColor}
             apikey={googleApiKey}
           />

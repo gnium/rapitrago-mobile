@@ -1,7 +1,7 @@
-import {AsyncStorage} from 'react-native';
+import {AsyncStorage} from "react-native";
 
 export default class AuthStorage {
-  static readonly sessionToken = 'session-token';
+  static readonly sessionToken = "session-token";
 
   static async getToken() {
     return await AsyncStorage.getItem(AuthStorage.sessionToken);

@@ -1,11 +1,11 @@
-import React from 'react';
-import {View, Text, Image, StatusBar} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React from "react";
+import {View, Text, Image, StatusBar} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import styles from './styles';
+import {RootStackParamList} from "../AppNavigator";
+import styles from "./styles";
 
-const orderIcon = require('../../../assets/oderplaced.png');
+const orderIcon = require("../../../assets/oderplaced.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -14,7 +14,7 @@ interface Props {
 const DoneOrder: React.FC<Props> = (props) => {
   const {navigation} = props;
   setTimeout(() => {
-    navigation.navigate('Tabs');
+    navigation.navigate("Tabs");
   }, 2000);
   return (
     <View style={styles.firstView}>

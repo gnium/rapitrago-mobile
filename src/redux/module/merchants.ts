@@ -1,6 +1,6 @@
-import request from '../../utils/requests'
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { store } from '../store';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import request from "../../utils/requests"
+import { store } from "../store";
 
 export interface Merchant {
     id: number;
@@ -18,7 +18,7 @@ export interface MerchantState {
 
 // Slice
 const slice = createSlice({
-  name: 'merchants',
+  name: "merchants",
   initialState: {
       merchantsList: [],
       merchantsLoading: false,
@@ -53,8 +53,8 @@ export const getMerchants = () =>  async (dispatch: any)  => {
     console.log(store.getState());
     dispatch(requestMerchants());
     request({
-        url:    '/merchants',
-        method: 'GET',
+        url:    "/merchants",
+        method: "GET",
         headers: {Authorization: store.getState().authentication.token}
       }).then((response) => {
           dispatch(receiveMerchants(response.data));

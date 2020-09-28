@@ -1,10 +1,10 @@
-import React from 'react';
-import {View, Text, SafeAreaView, StatusBar} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React from "react";
+import {View, Text, SafeAreaView, StatusBar} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import CatRestaurantCard from '../../Components/CatRestaurantCard';
-import styles from './styles';
+import {RootStackParamList} from "../AppNavigator";
+import CatRestaurantCard from "../../Components/CatRestaurantCard";
+import styles from "./styles";
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;

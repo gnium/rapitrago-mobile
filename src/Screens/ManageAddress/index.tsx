@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -7,16 +7,16 @@ import {
   Image,
   FlatList,
   TouchableWithoutFeedback,
-} from 'react-native';
-import {filter} from 'lodash';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {filter} from "lodash";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import Header from '../../Components/Header';
-import Button from '../../Components/Button';
-import styles from './styles';
+import {RootStackParamList} from "../AppNavigator";
+import Header from "../../Components/Header";
+import Button from "../../Components/Button";
+import styles from "./styles";
 
-const homeIcon = require('../../../assets/home.png');
+const homeIcon = require("../../../assets/home.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -26,14 +26,14 @@ const ManageAddress: React.FC<Props> = (props) => {
   const {navigation} = props;
   const [saveAddress, updateSaveAddress] = useState([
     {
-      id: '1',
+      id: "1",
       address:
-        'GeekyAnts Software, Bannerghatta Main Road, Btm Layout, 2nd Stage, 2nd Main Road, No 18, First Floor, Benguluru, Karnataka 560076 .',
+        "GeekyAnts Software, Bannerghatta Main Road, Btm Layout, 2nd Stage, 2nd Main Road, No 18, First Floor, Benguluru, Karnataka 560076 .",
     },
     {
-      id: '2',
+      id: "2",
       address:
-        'GeekyAnts Software, Bannerghatta Main Road, Btm Layout, 2nd Stage, 2nd Main Road, No 18, First Floor, Benguluru, Karnataka 560076 .',
+        "GeekyAnts Software, Bannerghatta Main Road, Btm Layout, 2nd Stage, 2nd Main Road, No 18, First Floor, Benguluru, Karnataka 560076 .",
     },
   ]);
   const deleteAddress = (ind: number) => {
@@ -65,7 +65,7 @@ const ManageAddress: React.FC<Props> = (props) => {
               </Text>
               <View style={styles.fifthView}>
                 <TouchableWithoutFeedback
-                  onPress={() => navigation.navigate('ManageAddressEdit')}>
+                  onPress={() => navigation.navigate("ManageAddressEdit")}>
                   <View style={styles.sixthView}>
                     <Text style={styles.thirdText}>Change</Text>
                   </View>
@@ -82,7 +82,7 @@ const ManageAddress: React.FC<Props> = (props) => {
         <View style={styles.eightView}>
           <Button
             style={styles.button}
-            onPress={() => navigation.navigate('ManageAddressEdit')}>
+            onPress={() => navigation.navigate("ManageAddressEdit")}>
             <Text style={styles.fifthText}>Add New Address</Text>
           </Button>
         </View>

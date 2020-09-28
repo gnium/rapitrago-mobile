@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
   FlatList,
   Image,
   TouchableWithoutFeedback,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../../Screens/AppNavigator';
-import {catResDetails} from '../../Data/data';
+import {RootStackParamList} from "../../Screens/AppNavigator";
+import {catResDetails} from "../../Data/data";
 
-import styles from './styles';
+import styles from "./styles";
 
-const mapPoint = require('../../../assets/placeholder.png');
-const starIcon = require('../../../assets/start.png');
+const mapPoint = require("../../../assets/placeholder.png");
+const starIcon = require("../../../assets/start.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -30,7 +30,7 @@ const CatRestaurantCard: React.FC<Props> = (props) => {
         keyExtractor={(item) => item.id}
         renderItem={({item}) => (
           <TouchableWithoutFeedback
-            onPress={() => navigation.navigate('MenuList')}>
+            onPress={() => navigation.navigate("MenuList")}>
             <View style={styles.secondView}>
               <View style={styles.thirdView}>
                 <Image

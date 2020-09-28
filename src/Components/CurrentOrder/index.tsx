@@ -1,8 +1,9 @@
-import React from 'react';
-import {View, Text, Image} from 'react-native';
-import styles from './styles';
-const foodPic1 = require('../../../assets/food-pic-small.png');
-const mapPoint = require('../../../assets/placeholder.png');
+import React from "react";
+import {View, Text, Image} from "react-native";
+import styles from "./styles";
+
+const foodPic1 = require("../../../assets/food-pic-small.png");
+const mapPoint = require("../../../assets/placeholder.png");
 
 const CurrentOrder: React.FC = () => {
   return (

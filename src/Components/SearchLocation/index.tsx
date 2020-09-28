@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -6,16 +6,16 @@ import {
   Image,
   TouchableWithoutFeedback,
   FlatList,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../../Screens/AppNavigator';
-import {fetchPrediction} from '../../utils';
-import styles from './styles';
+import {RootStackParamList} from "../../Screens/AppNavigator";
+import {fetchPrediction} from "../../utils";
+import styles from "./styles";
 
-const searchIcon = require('../../../assets/search.png');
-const locIcon = require('../../../assets/placeholder.png');
-const locateIcon = require('../../../assets/focus.png');
+const searchIcon = require("../../../assets/search.png");
+const locIcon = require("../../../assets/placeholder.png");
+const locateIcon = require("../../../assets/focus.png");
 
 interface Props {
   handlePress: () => void;
@@ -63,7 +63,7 @@ const SearchLocation: React.FC<Props> = (props) => {
                   <TouchableWithoutFeedback
                     onPress={() => {
                       handlePress();
-                      navigation.navigate('SaveAddress', {
+                      navigation.navigate("SaveAddress", {
                         address: item.description,
                       });
                     }}>

@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height} = constant.styleGuide;
 const iphoneX = height > 811;
@@ -24,8 +24,8 @@ export default StyleSheet.create({
     width: 70,
     backgroundColor: constant.commonColor,
     borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderWidth: 0.5,
     borderColor: constant.primaryColor,
     left: 20,
@@ -48,35 +48,35 @@ export default StyleSheet.create({
   firstText: {
     fontSize: 18,
     color: constant.thirdTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   fourthView: {
-    flexDirection: 'row',
+    flexDirection: "row",
     top: 20,
   },
   secondText: {
     left: 5,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.secondaryTextColor,
   },
   button: {
     height: 50,
     width: 330,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     marginTop: 50,
   },
   thirdText: {
     fontSize: 14,
     color: constant.primaryColor,
-    fontWeight: '400',
+    fontWeight: "400",
   },
   locationText: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.commonColor,
   },
 });

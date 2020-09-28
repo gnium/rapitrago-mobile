@@ -1,10 +1,10 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
     backgroundColor: constant.commonColor,
   },
   firstView: {
@@ -14,8 +14,8 @@ export default StyleSheet.create({
     height: 40,
     width: 240,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     bottom: 20,
     marginTop: 50,
@@ -23,19 +23,19 @@ export default StyleSheet.create({
   firstText: {
     color: constant.thirdTextColor,
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   secondText: {
     color: constant.commonColor,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   secondButton: {
     height: 40,
     width: 240,
     backgroundColor: constant.backColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     bottom: 20,
     marginTop: 15,
@@ -43,6 +43,6 @@ export default StyleSheet.create({
   thirdText: {
     color: constant.thirdTextColor,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

@@ -36,6 +36,7 @@
     "@typescript-eslint/quotes": ["error", "double"],
     "max-len": [2, { "code": 120, "ignoreUrls": true }],
     "import/no-cycle": "off",
-    "react/jsx-no-bind": "off"
+    "react/jsx-no-bind": "off",
+    "@typescript-eslint/no-loop-func": "off"
   }
 }

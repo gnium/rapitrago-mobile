@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {heightRatio, height} = constant.styleGuide;
 const iphoneX = height > 811;
@@ -17,8 +17,8 @@ export default StyleSheet.create({
     width: 50,
     backgroundColor: constant.primaryColor,
     borderRadius: 25,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   icon: {
     height: 15,
@@ -31,13 +31,13 @@ export default StyleSheet.create({
     height: 50,
     left: 30,
     marginRight: 60,
-    justifyContent: 'center',
+    justifyContent: "center",
     borderBottomWidth: 0.4,
     borderBottomColor: constant.lightText,
   },
   firstText: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     paddingTop: 5,
     color: constant.thirdTextColor,
   },
@@ -47,13 +47,13 @@ export default StyleSheet.create({
   },
   secondText: {
     fontSize: 13,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: constant.thirdTextColor,
   },
   thirdText: {
     paddingTop: 3,
     fontSize: 11,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.lightText,
   },
   sixthView: {
@@ -61,7 +61,7 @@ export default StyleSheet.create({
     left: 30,
   },
   seventhView: {
-    flexDirection: 'row',
+    flexDirection: "row",
     height: 80,
   },
   eighthView: {
@@ -69,12 +69,12 @@ export default StyleSheet.create({
   },
   fourthText: {
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   fifthText: {
     fontSize: 10,
-    fontWeight: '500',
+    fontWeight: "500",
     paddingTop: 5,
     color: constant.secondaryTextColor,
   },

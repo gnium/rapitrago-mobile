@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from "react";
 import {
   View,
   Text,
@@ -8,23 +8,23 @@ import {
   StatusBar,
   TouchableWithoutFeedback,
   SafeAreaView,
-} from 'react-native';
-import {findIndex} from 'lodash';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {findIndex} from "lodash";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import AddFood from '../../Components/AddFood';
-import BillDetails from '../../Components/BillDetails';
+import {RootStackParamList} from "../AppNavigator";
+import AddFood from "../../Components/AddFood";
+import BillDetails from "../../Components/BillDetails";
 
-import styles from './styles';
+import styles from "./styles";
 
 interface Props {
   addedFood: any;
   route: any;
   navigation: StackNavigationProp<RootStackParamList>;
 }
-const backIcon = require('../../../assets/back.png');
-const emptyCart = require('../../../assets/empty-cart.png');
+const backIcon = require("../../../assets/back.png");
+const emptyCart = require("../../../assets/empty-cart.png");
 
 const Cart: React.FC<Props> = (props) => {
   const {route, navigation} = props;

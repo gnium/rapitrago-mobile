@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height, width, heightRatio} = constant.styleGuide;
 
@@ -12,10 +12,10 @@ export default StyleSheet.create({
   },
   firstView: {
     flex: iphoneX ? 0.1 : 0.2,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   secondView: {
-    justifyContent: 'center',
+    justifyContent: "center",
     width: 40,
     marginLeft: 20,
   },
@@ -24,15 +24,15 @@ export default StyleSheet.create({
     width: 20,
   },
   thirdView: {
-    justifyContent: 'center',
+    justifyContent: "center",
     flex: 1,
     left: -10,
   },
   firstText: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 18,
     left: -10,
-    fontWeight: '700',
+    fontWeight: "700",
     color: constant.thirdTextColor,
   },
   fourthView: {
@@ -42,7 +42,7 @@ export default StyleSheet.create({
   secondText: {
     left: 20,
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   fifthView: {
@@ -54,19 +54,19 @@ export default StyleSheet.create({
     borderRadius: 5,
     borderWidth: 0.5,
     borderColor: constant.primaryColor,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   thirdText: {
     paddingTop: 9 * heightRatio,
     left: 10,
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.primaryColor,
   },
   fourthText: {
     fontSize: 14,
     left: 10,
-    fontWeight: '600',
+    fontWeight: "600",
     paddingTop: 3,
     color: constant.thirdTextColor,
   },
@@ -74,17 +74,17 @@ export default StyleSheet.create({
     flex: 0.8,
   },
   seventhView: {
-    justifyContent: 'center',
+    justifyContent: "center",
     flex: 0.2,
-    alignItems: 'center',
+    alignItems: "center",
   },
   eighthView: {
     height: 25,
     width: 25,
     borderRadius: 12.5,
     backgroundColor: constant.primaryColor,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   tickIcon: {
     height: 15,
@@ -100,7 +100,7 @@ export default StyleSheet.create({
     borderRadius: 5,
     borderWidth: 0.5,
     borderColor: constant.primaryColor,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   activeNinthView: {
     height: 60,
@@ -109,7 +109,7 @@ export default StyleSheet.create({
     marginRight: 40,
     marginTop: iphoneX ? 15 : 20,
     borderRadius: 5,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   tenthView: {
     flex: 1,
@@ -118,42 +118,42 @@ export default StyleSheet.create({
   fifthText: {
     fontSize: 14,
     left: 20,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
     marginBottom: 20,
   },
   eleventhView: {
     flex: 0.8,
-    alignItems: 'center',
+    alignItems: "center",
     left: 15,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   sixthText: {
     paddingLeft: 10,
     color: constant.thirdTextColor,
     fontSize: 14,
-    fontWeight: '700',
+    fontWeight: "700",
   },
   twelvethView: {
     flex: 0.2,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   buttonView: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     top: iphoneX ? 40 : 0,
   },
   button: {
     height: 50,
     width: width - 40,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: '700',
+    fontWeight: "700",
     color: constant.commonColor,
   },
   thirthteenthView: {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
@@ -9,16 +9,16 @@ import {
   TouchableWithoutFeedback,
   KeyboardAvoidingView,
   Platform,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import constant from '../../utils/constant';
-import {RootStackParamList} from '../AppNavigator';
-import Button from '../../Components/Button';
-import styles from './styles';
-import {couponsCode} from '../../Data/data';
+import constant from "../../utils/constant";
+import {RootStackParamList} from "../AppNavigator";
+import Button from "../../Components/Button";
+import styles from "./styles";
+import {couponsCode} from "../../Data/data";
 
-const backIcon = require('../../../assets/back.png');
+const backIcon = require("../../../assets/back.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -29,7 +29,7 @@ const ApplyCoupon: React.FC<Props> = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.container}>
         <View style={styles.flatListView}>
           <View style={styles.seventhView}>

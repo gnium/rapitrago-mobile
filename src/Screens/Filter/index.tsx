@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -7,17 +7,18 @@ import {
   FlatList,
   TouchableWithoutFeedback,
   Image,
-} from 'react-native';
-import MultiSlider from '@ptomasroos/react-native-multi-slider';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import MultiSlider from "@ptomasroos/react-native-multi-slider";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import styles from './styles';
-import {RootStackParamList} from '../AppNavigator';
-import constant from '../../utils/constant';
+import styles from "./styles";
+import {RootStackParamList} from "../AppNavigator";
+import constant from "../../utils/constant";
 
 const {widthRatio} = constant.styleGuide;
 
-const tickIcon = require('../../../assets/checked.png');
+const tickIcon = require("../../../assets/checked.png");
+
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
 }
@@ -29,29 +30,29 @@ interface cuisines {
 
 const Filter: React.FC<Props> = (props) => {
   const [cuisines] = useState<Array<cuisines>>([
-    {id: '1', name: 'American'},
-    {id: '2', name: 'Turkish'},
-    {id: '3', name: 'Asia'},
-    {id: '4', name: 'Fast Food'},
-    {id: '5', name: 'Pizza'},
-    {id: '6', name: 'Desserts'},
-    {id: '7', name: 'Mexican'},
+    {id: "1", name: "American"},
+    {id: "2", name: "Turkish"},
+    {id: "3", name: "Asia"},
+    {id: "4", name: "Fast Food"},
+    {id: "5", name: "Pizza"},
+    {id: "6", name: "Desserts"},
+    {id: "7", name: "Mexican"},
   ]);
   const [sort] = useState<Array<cuisines>>([
-    {id: '1', name: 'Top Rated'},
-    {id: '2', name: 'Nearest Me'},
-    {id: '3', name: 'Cost High to Low'},
-    {id: '4', name: 'Cost Low to High'},
+    {id: "1", name: "Top Rated"},
+    {id: "2", name: "Nearest Me"},
+    {id: "3", name: "Cost High to Low"},
+    {id: "4", name: "Cost Low to High"},
   ]);
   const [filter] = useState<Array<cuisines>>([
-    {id: '1', name: 'Open Now'},
-    {id: '2', name: 'Credits Cards'},
-    {id: '3', name: 'Free Delivery'},
+    {id: "1", name: "Open Now"},
+    {id: "2", name: "Credits Cards"},
+    {id: "3", name: "Free Delivery"},
   ]);
   const [selecCuisines, setSelectedCuisines] = useState<cuisines>();
   const [priceRange, setPriceRange] = useState<any>([20, 1000]);
-  const [ratefilter, setRateFilter] = useState('');
-  const [deliveryFilter, setDeliveryFilter] = useState('');
+  const [ratefilter, setRateFilter] = useState("");
+  const [deliveryFilter, setDeliveryFilter] = useState("");
   const {navigation} = props;
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -61,7 +62,7 @@ const Filter: React.FC<Props> = (props) => {
           <Text style={styles.commonText}>Reset</Text>
           <Text style={styles.commonText}>Filters</Text>
           <TouchableWithoutFeedback
-            onPress={() => navigation.navigate('RestaurantList')}>
+            onPress={() => navigation.navigate("RestaurantList")}>
             <Text style={styles.doneTewxt}>Done</Text>
           </TouchableWithoutFeedback>
         </View>
@@ -112,7 +113,7 @@ const Filter: React.FC<Props> = (props) => {
                     </View>
                   </TouchableWithoutFeedback>
                 ) : (
-                  <TouchableWithoutFeedback onPress={() => setRateFilter('')}>
+                  <TouchableWithoutFeedback onPress={() => setRateFilter("")}>
                     <View style={styles.eightView}>
                       <Text style={styles.activeThirdText}>{item.name}</Text>
                       <Image
@@ -144,7 +145,7 @@ const Filter: React.FC<Props> = (props) => {
                   </TouchableWithoutFeedback>
                 ) : (
                   <TouchableWithoutFeedback
-                    onPress={() => setDeliveryFilter('')}>
+                    onPress={() => setDeliveryFilter("")}>
                     <View style={styles.eightView}>
                       <Text style={styles.activeThirdText}>{item.name}</Text>
                       <Image
@@ -163,11 +164,11 @@ const Filter: React.FC<Props> = (props) => {
           <Text style={styles.fourthText}>Price</Text>
           <View style={styles.tenthView}>
             <Text style={styles.priceText}>
-              {' '}
+              {" "}
               ${priceRange && priceRange[0]}
             </Text>
             <Text style={styles.priceText}>
-              {' '}
+              {" "}
               ${priceRange && priceRange[1]}
             </Text>
           </View>

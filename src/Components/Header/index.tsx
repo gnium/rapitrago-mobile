@@ -1,11 +1,11 @@
-import React from 'react';
-import {View, Text, TouchableWithoutFeedback, Image} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React from "react";
+import {View, Text, TouchableWithoutFeedback, Image} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import styles from './styles';
-import {RootStackParamList} from '../../Screens/AppNavigator';
+import styles from "./styles";
+import {RootStackParamList} from "../../Screens/AppNavigator";
 
-const backIcon = require('../../../assets/back.png');
+const backIcon = require("../../../assets/back.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;

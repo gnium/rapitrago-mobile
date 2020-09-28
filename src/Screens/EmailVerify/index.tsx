@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from "react";
 import {
   Text,
   View,
@@ -8,19 +8,20 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
-} from 'react-native';
-import Swiper from 'react-native-swiper';
-import {StackNavigationProp} from '@react-navigation/stack';
-import Geolocation from '@react-native-community/geolocation';
+} from "react-native";
+import Swiper from "react-native-swiper";
+import {StackNavigationProp} from "@react-navigation/stack";
+import Geolocation from "@react-native-community/geolocation";
 
 import { useDispatch, useSelector } from "react-redux";
-import constant from '../../utils/constant';
-import Button from '../../Components/Button';
-import {RootStackParamList} from '../AppNavigator';
-import styles from './styles';
-//redux stuff
-import {loginUser} from '../../redux/module/authentication';
-const image = require('../../../assets/Artboard.png');
+import constant from "../../utils/constant";
+import Button from "../../Components/Button";
+import {RootStackParamList} from "../AppNavigator";
+import styles from "./styles";
+// redux stuff
+import {loginUser} from "../../redux/module/authentication";
+
+const image = require("../../../assets/Artboard.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -30,10 +31,10 @@ const EmailVerify: React.FC<Props> = (props: any) => {
   Geolocation.requestAuthorization();
   Geolocation.getCurrentPosition(info => console.log(info));
   const dispatch = useDispatch();
-  let { authentication } =  useSelector<any, any>((state) => state);
+  const { authentication } =  useSelector<any, any>((state) => state);
   console.log(authentication);
-  const [password, setPassword] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
   const onChangePassword = (val: string) => {
     setPassword(val);
   };
@@ -42,7 +43,7 @@ const EmailVerify: React.FC<Props> = (props: any) => {
     if(authentication?.isAuthenticated){
       navigation.reset({
         index: 0,
-        routes: [{name: 'Tabs'}],
+        routes: [{name: "Tabs"}],
       })
     }
   }, [authentication]);
@@ -51,8 +52,8 @@ const EmailVerify: React.FC<Props> = (props: any) => {
    * PROPOSED LOGIN FLOW
    */
   const [values, setValues] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   } as userDataProps);
   const [errors, setErrors] = useState({} as formError);
   const [loading, setLoading] = useState(false);
@@ -67,8 +68,8 @@ const EmailVerify: React.FC<Props> = (props: any) => {
   const handleSubmit = (e: any) => {
     e?.preventDefault();
     setLoading(true);
-    //your client side validation here
-    //after success validation
+    // your client side validation here
+    // after success validation
     const userData = {
       email_address: email,
       secured_password: password,
@@ -90,7 +91,7 @@ const EmailVerify: React.FC<Props> = (props: any) => {
   return (
     <View style={styles.firstView}>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
         style={styles.firstView}>
         <StatusBar
           barStyle="light-content"
@@ -112,30 +113,30 @@ const EmailVerify: React.FC<Props> = (props: any) => {
             <View style={styles.thirdView}>
               <Text style={styles.firstText}>Login with Email</Text>
               <Text style={styles.secondText}>
-                Enter your details to get started{' '}
+                Enter your details to get started{" "}
               </Text>
               <View style={styles.fourthView}>
                 <TextInput
                   placeholder="Email"
-                  placeholderTextColor={'grey'}
-                  autoFocus={true}
+                  placeholderTextColor="grey"
+                  autoFocus
                   autoCorrect={false}
                   onChangeText={(text) => onChangeEmail(text)}
                   value={email}
-                  selectionColor={'grey'}
+                  selectionColor="grey"
                   style={styles.input}
                 />
               </View>
               <View style={styles.fifthView}>
                 <TextInput
                   placeholder="Password"
-                  placeholderTextColor={'grey'}
+                  placeholderTextColor="grey"
                   autoCorrect={false}
                   onChangeText={(text) => onChangePassword(text)}
                   value={password}
-                  selectionColor={'grey'}
+                  selectionColor="grey"
                   style={styles.input}
-                  secureTextEntry={true}
+                  secureTextEntry
                 />
               </View>
               <Button

@@ -1,16 +1,16 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text, Image, TouchableWithoutFeedback, Alert} from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React, {useState, useEffect} from "react";
+import {View, Text, Image, TouchableWithoutFeedback, Alert} from "react-native";
+import MapView, {Marker} from "react-native-maps";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import {fetchCoordinatesFromAddress} from '../../utils';
-import Button from '../../Components/Button';
-import styles from './styles';
+import {RootStackParamList} from "../AppNavigator";
+import {fetchCoordinatesFromAddress} from "../../utils";
+import Button from "../../Components/Button";
+import styles from "./styles";
 
-const pinIcon = require('../../../assets/pin-color.png');
-const locIcon = require('../../../assets/placeholder.png');
-const backIcon = require('../../../assets/back.png');
+const pinIcon = require("../../../assets/pin-color.png");
+const locIcon = require("../../../assets/placeholder.png");
+const backIcon = require("../../../assets/back.png");
 
 interface Props {
   route: any;
@@ -80,7 +80,7 @@ const SaveAddress: React.FC<Props> = (props) => {
                     : address}
                 </Text>
                 <TouchableWithoutFeedback
-                  onPress={() => Alert.alert('Pressed')}>
+                  onPress={() => Alert.alert("Pressed")}>
                   <View style={styles.firstView}>
                     <Text style={styles.thirdText}>Change</Text>
                   </View>
@@ -88,7 +88,7 @@ const SaveAddress: React.FC<Props> = (props) => {
               </View>
               <Button
                 style={styles.button}
-                onPress={() => props.navigation.navigate('Tabs')}>
+                onPress={() => props.navigation.navigate("Tabs")}>
                 <Text style={styles.locationText}>Confirm location</Text>
               </Button>
             </View>

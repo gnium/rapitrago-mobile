@@ -1,5 +1,5 @@
-import {StyleSheet, Platform} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet, Platform} from "react-native";
+import constant from "../../utils/constant";
 
 const {height, heightRatio} = constant.styleGuide;
 const iphoneX = height > 811;
@@ -10,11 +10,11 @@ export default StyleSheet.create({
     backgroundColor: constant.commonColor,
   },
   firstView: {
-    height: Platform.OS === 'android' ? 60 * heightRatio : 75 * heightRatio,
-    flexDirection: 'row',
-    alignItems: 'center',
+    height: Platform.OS === "android" ? 60 * heightRatio : 75 * heightRatio,
+    flexDirection: "row",
+    alignItems: "center",
     left: 20,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     marginRight: 60,
   },
   secondView: {
@@ -22,8 +22,8 @@ export default StyleSheet.create({
     width: 35,
     borderRadius: 17.5,
     backgroundColor: constant.paymentBackGround,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     left: 20,
     bottom: 5,
     top: iphoneX ? 15 : 10,
@@ -31,7 +31,7 @@ export default StyleSheet.create({
   imageIcon: {
     height: 15,
     width: 15,
-    position: 'absolute',
+    position: "absolute",
   },
   backIcon: {
     height: 20,
@@ -40,7 +40,7 @@ export default StyleSheet.create({
   },
   firstText: {
     fontSize: 18,
-    fontWeight: '500',
+    fontWeight: "500",
     top: iphoneX ? 15 : 10,
     left: 18,
     color: constant.thirdTextColor,
@@ -50,27 +50,27 @@ export default StyleSheet.create({
   },
   fourthView: {
     flex: 0.2,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   fifthView: {
     flex: 2,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   secondText: {
     fontSize: 22,
-    fontWeight: '400',
+    fontWeight: "400",
     left: 20,
     color: constant.thirdTextColor,
   },
   sixthView: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   thirdText: {
     left: 35 * heightRatio,
     fontSize: 16,
-    fontWeight: '700',
+    fontWeight: "700",
   },
   seventhView: {
     left: 35 * heightRatio,

@@ -1,16 +1,16 @@
-import React from 'react';
-import {View, StatusBar, ImageBackground} from 'react-native';
-import Swiper from 'react-native-swiper';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React from "react";
+import {View, StatusBar, ImageBackground} from "react-native";
+import Swiper from "react-native-swiper";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import constant from '../../utils/constant';
-import CatRestaurant from '../../Components/CatRestaurant';
-import CatRestaurantCard from '../../Components/CatRestaurantCard';
-import {RootStackParamList} from '../AppNavigator';
+import constant from "../../utils/constant";
+import CatRestaurant from "../../Components/CatRestaurant";
+import CatRestaurantCard from "../../Components/CatRestaurantCard";
+import {RootStackParamList} from "../AppNavigator";
 
-import styles from './styles';
+import styles from "./styles";
 
-const resType = require('../../../assets/background-login.png');
+const resType = require("../../../assets/background-login.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;

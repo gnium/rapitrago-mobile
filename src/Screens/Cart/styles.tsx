@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height} = constant.styleGuide;
 
@@ -15,8 +15,8 @@ export default StyleSheet.create({
   },
   secondView: {
     flex: iphoneX ? 0.4 : 0.5,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   icon: {
     height: 20,
@@ -27,14 +27,14 @@ export default StyleSheet.create({
     marginTop: iphoneX ? 35 : 20,
   },
   thirdView: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     flex: 1,
     top: iphoneX ? 17 : 10,
   },
   firstText: {
     fontSize: 18,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
     left: -20,
   },
@@ -44,20 +44,20 @@ export default StyleSheet.create({
     borderBottomColor: constant.secondaryTextColor,
     left: 20,
     marginRight: 40,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   fifthView: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   secondText: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   priceText: {
     fontSize: 12,
-    fontWeight: '400',
+    fontWeight: "400",
     color: constant.secondaryTextColor,
     bottom: 5,
   },
@@ -69,8 +69,8 @@ export default StyleSheet.create({
   },
   emptyView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   emptyImage: {
     height: 100,
@@ -80,13 +80,13 @@ export default StyleSheet.create({
   emptyTextFirst: {
     bottom: 30,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   emptyTextSecond: {
     bottom: 20,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
 });

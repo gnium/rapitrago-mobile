@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 export default StyleSheet.create({
   firstView: {
@@ -10,7 +10,7 @@ export default StyleSheet.create({
     left: 20,
     paddingTop: 30,
     fontSize: 18,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   secondView: {

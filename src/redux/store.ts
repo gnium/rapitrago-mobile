@@ -1,6 +1,6 @@
-import AsyncStorage from '@react-native-community/async-storage';
-import { combineReducers, applyMiddleware, compose} from 'redux';
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
+import AsyncStorage from "@react-native-community/async-storage";
+import { combineReducers, applyMiddleware, compose} from "redux";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit"
 import {
   persistStore,
   persistReducer,
@@ -10,12 +10,13 @@ import {
   PERSIST,
   PURGE,
   REGISTER
-} from 'redux-persist'
-import thunk from 'redux-thunk';
-//import auth from './reducers/auth';
-import authentication from './module/authentication';
-import merchants from './module/merchants';
-import uiReducer from './module/uiReducer';
+} from "redux-persist"
+import thunk from "redux-thunk";
+// import auth from './reducers/auth';
+import authentication from "./module/authentication";
+import merchants from "./module/merchants";
+import uiReducer from "./module/uiReducer";
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   : compose;
@@ -30,12 +31,12 @@ const rootReducer = combineReducers({
 // Middleware: Redux Persist Config
 const persistConfig = {
   // Root?
-  key: 'root',
+  key: "root",
   // Storage Method (React Native)
   storage: AsyncStorage,
   // Whitelist (Save Specific Reducers)
   whitelist: [
-    'authentication',
+    "authentication",
   ],
   // Blacklist (Don't Save Specific Reducers)
 };
@@ -51,7 +52,7 @@ const store = configureStore({
   }).concat(thunk)
 })
 
-let persistor = persistStore(store)
+const persistor = persistStore(store)
 
 // Exports
 export {

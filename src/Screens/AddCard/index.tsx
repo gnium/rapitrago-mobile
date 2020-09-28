@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
@@ -7,16 +7,16 @@ import {
   TextInput,
   KeyboardAvoidingView,
   Platform,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import Button from '../../Components/Button';
-import Header from '../../Components/Header';
-import constant from '../../utils/constant';
-import styles from './styles';
+import {RootStackParamList} from "../AppNavigator";
+import Button from "../../Components/Button";
+import Header from "../../Components/Header";
+import constant from "../../utils/constant";
+import styles from "./styles";
 
-const visaIcon = require('../../../assets/visa2.png');
+const visaIcon = require("../../../assets/visa2.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -27,7 +27,7 @@ const AddCard: React.FC<Props> = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' && 'padding'}
+        behavior={Platform.OS === "ios" && "padding"}
         style={styles.keyboardView}>
         <View style={styles.firstView}>
           <Header navigation={navigation} title="Add Card" />
@@ -51,7 +51,7 @@ const AddCard: React.FC<Props> = (props) => {
               placeholderTextColor={constant.secondaryTextColor}
               selectionColor={constant.secondaryTextColor}
               style={styles.textInput}
-              keyboardType={'number-pad'}
+              keyboardType="number-pad"
             />
           </View>
           <View style={styles.fourthView}>
@@ -60,7 +60,7 @@ const AddCard: React.FC<Props> = (props) => {
               placeholderTextColor={constant.secondaryTextColor}
               selectionColor={constant.secondaryTextColor}
               style={styles.textInput}
-              keyboardType={'number-pad'}
+              keyboardType="number-pad"
             />
           </View>
           <View style={styles.fourthView}>
@@ -69,14 +69,14 @@ const AddCard: React.FC<Props> = (props) => {
               placeholderTextColor={constant.secondaryTextColor}
               selectionColor={constant.secondaryTextColor}
               style={styles.textInput}
-              keyboardType={'number-pad'}
+              keyboardType="number-pad"
             />
           </View>
         </View>
         <View style={styles.fifthView}>
           <Button
             style={styles.button}
-            onPress={() => navigation.navigate('Tabs')}>
+            onPress={() => navigation.navigate("Tabs")}>
             <Text style={styles.secondText}>Save</Text>
           </Button>
         </View>

@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {width, heightRatio, height} = constant.styleGuide;
 
@@ -11,11 +11,11 @@ export default StyleSheet.create({
   },
   firstView: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   secondView: {
     flex: 4,
-    width: width,
+    width,
   },
   thirdView: {
     flex: 2,
@@ -31,13 +31,13 @@ export default StyleSheet.create({
   firstText: {
     fontSize: 28,
     color: constant.primaryTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   secondText: {
     top: 12,
     color: constant.secondaryTextColor,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   fifthView: {
     flex: 2,

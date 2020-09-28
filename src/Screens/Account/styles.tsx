@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height} = constant.styleGuide;
 
@@ -12,12 +12,12 @@ export default StyleSheet.create({
   },
   secondView: {
     flex: iphoneX ? 0.4 : 0.5,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   thirdView: {
     flex: 0.4,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   imgView: {
     height: 80,
@@ -31,7 +31,7 @@ export default StyleSheet.create({
   },
   firstText: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     top: 30,
     left: 5,
     color: constant.thirdTextColor,
@@ -39,7 +39,7 @@ export default StyleSheet.create({
   secondText: {
     fontSize: 12,
     left: 5,
-    fontWeight: '500',
+    fontWeight: "500",
     paddingTop: 35,
     color: constant.thirdTextColor,
   },
@@ -53,12 +53,12 @@ export default StyleSheet.create({
     top: -20,
     left: 50,
     borderRadius: 12.5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   fifthView: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
+    justifyContent: "space-between",
+    flexDirection: "row",
     top: 20,
     left: 20,
     marginRight: 40,
@@ -66,7 +66,7 @@ export default StyleSheet.create({
   },
   commonText: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   sixthView: {
@@ -77,7 +77,7 @@ export default StyleSheet.create({
   },
   thirdText: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: constant.thirdTextColor,
   },
   icons: {

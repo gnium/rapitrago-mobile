@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -6,17 +6,17 @@ import {
   Image,
   Switch,
   TouchableWithoutFeedback,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import styles from './styles';
-import PopularFood from '../../Components/PopularFood';
-import {RootStackParamList} from '../AppNavigator';
-import FullMenu from '../../Components/FullMenu';
-import constant from '../../utils/constant';
+import styles from "./styles";
+import PopularFood from "../../Components/PopularFood";
+import {RootStackParamList} from "../AppNavigator";
+import FullMenu from "../../Components/FullMenu";
+import constant from "../../utils/constant";
 
-const searchIcon = require('../../../assets/search.png');
-const backIcon = require('../../../assets/back.png');
+const searchIcon = require("../../../assets/search.png");
+const backIcon = require("../../../assets/back.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;

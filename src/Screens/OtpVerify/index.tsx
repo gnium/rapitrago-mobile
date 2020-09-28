@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -7,19 +7,19 @@ import {
   StatusBar,
   Image,
   Alert,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 import {
   CodeField,
   Cursor,
   useBlurOnFulfill,
   useClearByFocusCell,
-} from 'react-native-confirmation-code-field';
+} from "react-native-confirmation-code-field";
 
-import styles from './styles';
-import {RootStackParamList} from '../AppNavigator';
+import styles from "./styles";
+import {RootStackParamList} from "../AppNavigator";
 
-const backIcon = require('../../../assets/back.png');
+const backIcon = require("../../../assets/back.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -27,7 +27,7 @@ interface Props {
 
 const OtpVerify: React.FC<Props> = (props) => {
   const CELL_COUNT = 4;
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const {navigation} = props;
   const [val, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -37,7 +37,7 @@ const OtpVerify: React.FC<Props> = (props) => {
   value.length > 3 &&
     navigation.reset({
       index: 0,
-      routes: [{name: 'SignUp'}],
+      routes: [{name: "SignUp"}],
     });
 
   return (
@@ -91,7 +91,7 @@ const OtpVerify: React.FC<Props> = (props) => {
         </View>
         <View style={styles.ninthView}>
           <Text style={styles.fourthText}>Didn't you received any code?</Text>
-          <TouchableWithoutFeedback onPress={() => Alert.alert('Code Resent')}>
+          <TouchableWithoutFeedback onPress={() => Alert.alert("Code Resent")}>
             <Text style={styles.fifthText}>Resend Code</Text>
           </TouchableWithoutFeedback>
         </View>

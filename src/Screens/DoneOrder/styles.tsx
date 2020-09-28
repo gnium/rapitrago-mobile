@@ -1,12 +1,12 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet} from "react-native";
 
-import constant from '../../utils/constant';
+import constant from "../../utils/constant";
 
 export default StyleSheet.create({
   firstView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: constant.commonColor,
   },
   secondView: {
@@ -14,8 +14,8 @@ export default StyleSheet.create({
     width: 120,
     borderWidth: 1.0,
     borderRadius: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     bottom: 80,
     borderColor: constant.primaryColor,
   },
@@ -26,7 +26,7 @@ export default StyleSheet.create({
   firstText: {
     bottom: 25,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
 });

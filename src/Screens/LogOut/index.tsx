@@ -1,10 +1,10 @@
-import React from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React from "react";
+import {View, Text, SafeAreaView} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../AppNavigator';
-import styles from './styles';
-import Button from '../../Components/Button';
+import {RootStackParamList} from "../AppNavigator";
+import styles from "./styles";
+import Button from "../../Components/Button";
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -22,7 +22,7 @@ const LogOut: React.FC<Props> = (props) => {
         onPress={() =>
           navigation.reset({
             index: 0,
-            routes: [{name: 'Splash'}],
+            routes: [{name: "Splash"}],
           })
         }>
         <Text style={styles.secondText}>Confirm</Text>

@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
   SafeAreaView,
   FlatList,
   TouchableWithoutFeedback,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {filter} from 'lodash';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
+import {filter} from "lodash";
 
-import {RootStackParamList} from '../AppNavigator';
-import Header from '../../Components/Header';
-import Payments from '../../Components/Payments';
-import Button from '../../Components/Button';
-import styles from './styles';
+import {RootStackParamList} from "../AppNavigator";
+import Header from "../../Components/Header";
+import Payments from "../../Components/Payments";
+import Button from "../../Components/Button";
+import styles from "./styles";
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -22,12 +22,12 @@ interface Props {
 const PaymentOptions: React.FC<Props> = (props) => {
   const [payment, setPayment] = useState([
     {
-      id: '1',
-      cardNo: '4343 xxxx xxxx 4343',
+      id: "1",
+      cardNo: "4343 xxxx xxxx 4343",
     },
     {
-      id: '2',
-      cardNo: '5353 xxxx xxxx 5353',
+      id: "2",
+      cardNo: "5353 xxxx xxxx 5353",
     },
   ]);
   const {navigation} = props;
@@ -62,7 +62,7 @@ const PaymentOptions: React.FC<Props> = (props) => {
         <View style={styles.fourthView}>
           <Button
             style={styles.button}
-            onPress={() => navigation.navigate('AddCard')}>
+            onPress={() => navigation.navigate("AddCard")}>
             <Text style={styles.thirdText}>Add New Card</Text>
           </Button>
         </View>

@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {View, Text, FlatList, TouchableWithoutFeedback} from 'react-native';
-import {find, findIndex} from 'lodash';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React, {useState} from "react";
+import {View, Text, FlatList, TouchableWithoutFeedback} from "react-native";
+import {find, findIndex} from "lodash";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {foodItems} from '../../Data/data';
-import {RootStackParamList} from '../../Screens/AppNavigator';
-import AddFood from '../AddFood';
-import styles from './styles';
+import {foodItems} from "../../Data/data";
+import {RootStackParamList} from "../../Screens/AppNavigator";
+import AddFood from "../AddFood";
+import styles from "./styles";
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -103,7 +103,7 @@ const FullMenu: React.FC<Props> = (props) => {
             <View style={styles.tenthView}>
               <TouchableWithoutFeedback
                 onPress={() =>
-                  navigation.navigate('Cart', {
+                  navigation.navigate("Cart", {
                     addedFood: addFood,
                   })
                 }>

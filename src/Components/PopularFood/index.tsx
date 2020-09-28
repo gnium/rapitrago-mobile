@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
   Image,
   FlatList,
   TouchableWithoutFeedback,
-} from 'react-native';
-import {find, findIndex} from 'lodash';
+} from "react-native";
+import {find, findIndex} from "lodash";
 
-import styles from './styles';
-import AddFood from '../AddFood';
-import {popularFood} from '../../Data/data';
+import styles from "./styles";
+import AddFood from "../AddFood";
+import {popularFood} from "../../Data/data";
 
 const PopularFood: React.FC = () => {
   const [addFood, setAddFood] = useState<any>([]);

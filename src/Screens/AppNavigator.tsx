@@ -1,28 +1,28 @@
-import * as React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import Splash from './Splash';
-import Verify from './Verify';
-import EmailVerify from './EmailVerify';
-import Login from './Login';
-import OtpVerify from './OtpVerify';
-import SignUp from './SignUp';
-import TabNavigation from './TabNavigation';
-import Filter from './Filter';
-import SaveAddress from './SaveAddress';
-import Search from './Search';
-import RestaurantList from './RestaurantList';
-import MenuList from './MenuList';
-import Cart from './Cart';
-import ApplyCoupon from './ApplyCoupon';
-import CheckOut from './CheckOut';
-import DoneOrder from './DoneOrder';
-import Orders from './Orders';
-import ManageAddress from './ManageAddress';
-import ManageAddressEdit from './ManageAddressEdit';
-import PaymentOptions from './PaymentOptions';
-import TrackOrder from './TrackOrder';
-import AddCard from './AddCard';
-import LogOut from './LogOut';
+import * as React from "react";
+import {createStackNavigator} from "@react-navigation/stack";
+import Splash from "./Splash";
+import Verify from "./Verify";
+import EmailVerify from "./EmailVerify";
+import Login from "./Login";
+import OtpVerify from "./OtpVerify";
+import SignUp from "./SignUp";
+import TabNavigation from "./TabNavigation";
+import Filter from "./Filter";
+import SaveAddress from "./SaveAddress";
+import Search from "./Search";
+import RestaurantList from "./RestaurantList";
+import MenuList from "./MenuList";
+import Cart from "./Cart";
+import ApplyCoupon from "./ApplyCoupon";
+import CheckOut from "./CheckOut";
+import DoneOrder from "./DoneOrder";
+import Orders from "./Orders";
+import ManageAddress from "./ManageAddress";
+import ManageAddressEdit from "./ManageAddressEdit";
+import PaymentOptions from "./PaymentOptions";
+import TrackOrder from "./TrackOrder";
+import AddCard from "./AddCard";
+import LogOut from "./LogOut";
 
 export type RootStackParamList = {
   Splash: undefined;
@@ -53,7 +53,7 @@ export type RootStackParamList = {
 const RootStack = createStackNavigator<RootStackParamList>();
 const OrderStack = () => {
   return (
-    <RootStack.Navigator headerMode={'none'}>
+    <RootStack.Navigator headerMode="none">
       <RootStack.Screen name="Orders" component={Orders} />
       <RootStack.Screen name="TrackOrder" component={TrackOrder} />
     </RootStack.Navigator>
@@ -61,7 +61,7 @@ const OrderStack = () => {
 };
 const AddressStack = () => {
   return (
-    <RootStack.Navigator headerMode={'none'}>
+    <RootStack.Navigator headerMode="none">
       <RootStack.Screen name="ManageAddress" component={ManageAddress} />
       <RootStack.Screen
         name="ManageAddressEdit"
@@ -72,7 +72,7 @@ const AddressStack = () => {
 };
 const PaymentStack = () => {
   return (
-    <RootStack.Navigator headerMode={'none'}>
+    <RootStack.Navigator headerMode="none">
       <RootStack.Screen name="PaymentOptions" component={PaymentOptions} />
       <RootStack.Screen name="AddCard" component={AddCard} />
     </RootStack.Navigator>
@@ -81,7 +81,7 @@ const PaymentStack = () => {
 
 const AppStack = () => {
   return (
-    <RootStack.Navigator initialRouteName="Splash" headerMode={'none'}>
+    <RootStack.Navigator initialRouteName="Splash" headerMode="none">
       <RootStack.Screen name="Splash" component={Splash} />
       <RootStack.Screen name="Verify" component={Verify} />
       <RootStack.Screen name="EmailVerify" component={EmailVerify} />

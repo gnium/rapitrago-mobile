@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   Text,
   View,
@@ -7,24 +7,24 @@ import {
   TextInput,
   KeyboardAvoidingView,
   Platform,
-} from 'react-native';
-import Swiper from 'react-native-swiper';
-import {StackNavigationProp} from '@react-navigation/stack';
+} from "react-native";
+import Swiper from "react-native-swiper";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import constant from '../../utils/constant';
-import Button from '../../Components/Button';
-import {RootStackParamList} from '../AppNavigator';
-import styles from './styles';
+import constant from "../../utils/constant";
+import Button from "../../Components/Button";
+import {RootStackParamList} from "../AppNavigator";
+import styles from "./styles";
 
-const image = require('../../../assets/Artboard.png');
+const image = require("../../../assets/Artboard.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
 }
 
 const SignUp: React.FC<Props> = (props) => {
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
   const onChangeText = (val: string) => {
     setName(val);
   };
@@ -35,7 +35,7 @@ const SignUp: React.FC<Props> = (props) => {
   return (
     <View style={styles.firstView}>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
         style={styles.firstView}>
         <StatusBar
           barStyle="light-content"
@@ -57,28 +57,28 @@ const SignUp: React.FC<Props> = (props) => {
             <View style={styles.thirdView}>
               <Text style={styles.firstText}>Register</Text>
               <Text style={styles.secondText}>
-                Enter your details to get started{' '}
+                Enter your details to get started{" "}
               </Text>
               <View style={styles.fourthView}>
                 <TextInput
                   placeholder="Name"
-                  placeholderTextColor={'grey'}
-                  autoFocus={true}
+                  placeholderTextColor="grey"
+                  autoFocus
                   autoCorrect={false}
                   onChangeText={(text) => onChangeText(text)}
                   value={name}
-                  selectionColor={'grey'}
+                  selectionColor="grey"
                   style={styles.input}
                 />
               </View>
               <View style={styles.fifthView}>
                 <TextInput
                   placeholder="Email"
-                  placeholderTextColor={'grey'}
+                  placeholderTextColor="grey"
                   autoCorrect={false}
                   onChangeText={(text) => onChangeEmail(text)}
                   value={email}
-                  selectionColor={'grey'}
+                  selectionColor="grey"
                   style={styles.input}
                 />
               </View>
@@ -87,7 +87,7 @@ const SignUp: React.FC<Props> = (props) => {
                 onPress={() =>
                   navigation.reset({
                     index: 0,
-                    routes: [{name: 'Tabs'}],
+                    routes: [{name: "Tabs"}],
                   })
                 }>
                 <Text style={styles.thirdText}>Register</Text>

@@ -1,10 +1,10 @@
-import * as React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Restaurants from './Restaurant';
-import Cart from './Cart';
-import Favourite from './Favourite';
-import Account from './Account';
-import FooterTab from '../Components/FooterTab';
+import * as React from "react";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import Restaurants from "./Restaurant";
+import Cart from "./Cart";
+import Favourite from "./Favourite";
+import Account from "./Account";
+import FooterTab from "../Components/FooterTab";
 
 const Tab = createBottomTabNavigator();
 

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Text,
   View,
@@ -7,17 +7,17 @@ import {
   KeyboardAvoidingView,
   Platform,
   StatusBar,
-} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {SafeAreaView} from 'react-native-safe-area-context';
+} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
+import {SafeAreaView} from "react-native-safe-area-context";
 
-import PhoneInput from '../../Components/PhoneInput';
-import constant from '../../utils/constant';
-import Button from '../../Components/Button';
-import styles from './styles';
-import {RootStackParamList} from '../AppNavigator';
+import PhoneInput from "../../Components/PhoneInput";
+import constant from "../../utils/constant";
+import Button from "../../Components/Button";
+import styles from "./styles";
+import {RootStackParamList} from "../AppNavigator";
 
-const backIcon = require('../../../assets/back.png');
+const backIcon = require("../../../assets/back.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -28,7 +28,7 @@ const Login: React.FC<Props> = (props) => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.firstView}>
         <StatusBar
           barStyle="dark-content"
@@ -53,13 +53,13 @@ const Login: React.FC<Props> = (props) => {
             </Text>
           </View>
           <View style={styles.seventhView}>
-            <PhoneInput enableEvent="auto" focus={true} />
+            <PhoneInput enableEvent="auto" focus />
           </View>
         </View>
         <View style={styles.eightView}>
           <View style={styles.ninthView}>
             <Button
-              onPress={() => navigation.navigate('OtpVerify')}
+              onPress={() => navigation.navigate("OtpVerify")}
               style={styles.fourthView}>
               <Text style={styles.thirdText}>Continue</Text>
             </Button>

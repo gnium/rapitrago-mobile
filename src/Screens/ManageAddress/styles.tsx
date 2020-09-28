@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {width} = constant.styleGuide;
 
@@ -12,18 +12,18 @@ export default StyleSheet.create({
     height: 60,
   },
   secondView: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginLeft: 20,
     marginTop: 30,
-    alignItems: 'center',
+    alignItems: "center",
   },
   thirdView: {
     height: 25,
     width: 25,
     borderRadius: 2,
     borderWidth: 0.4,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderColor: constant.lightText,
   },
   img: {
@@ -33,7 +33,7 @@ export default StyleSheet.create({
   },
   firstText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     paddingLeft: 10,
     color: constant.thirdTextColor,
   },
@@ -44,19 +44,19 @@ export default StyleSheet.create({
   secondText: {
     lineHeight: 20,
     fontSize: 13,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   fifthView: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 15,
   },
   sixthView: {
     height: 25,
     width: 70,
     borderWidth: 0.5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 6,
     borderColor: constant.primaryColor,
   },
@@ -65,19 +65,19 @@ export default StyleSheet.create({
     width: 70,
     borderWidth: 0.5,
     left: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 6,
     borderColor: constant.thirdTextColor,
   },
   thirdText: {
     fontSize: 12,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.primaryColor,
   },
   fourthText: {
     fontSize: 12,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   eightView: {
@@ -87,15 +87,15 @@ export default StyleSheet.create({
     height: 50,
     width: width - 45,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     bottom: 20,
   },
   fifthText: {
     color: constant.commonColor,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   ninthView: {
     paddingTop: 10,

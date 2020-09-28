@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 export default StyleSheet.create({
   firstView: {
@@ -15,19 +15,19 @@ export default StyleSheet.create({
   },
   firstText: {
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   secondText: {
     paddingTop: 8,
     fontSize: 13,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.secondaryTextColor,
   },
   thirdText: {
     paddingTop: 2,
     fontSize: 12,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.secondaryTextColor,
   },
   thirdView: {
@@ -42,13 +42,13 @@ export default StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     top: 20,
-    justifyContent: 'center',
+    justifyContent: "center",
     marginBottom: 30,
   },
   fourthText: {
     left: 20,
     color: constant.thirdTextColor,
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
   },
 });

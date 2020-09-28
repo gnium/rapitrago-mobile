@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {height, width, heightRatio} = constant.styleGuide;
 
@@ -20,9 +20,9 @@ export default StyleSheet.create({
     left: 20,
     height: 50,
     borderBottomWidth: 0.4,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
     marginRight: 40,
     paddingBottom: 2,
     borderBottomColor: constant.lightText,
@@ -30,27 +30,27 @@ export default StyleSheet.create({
   seventhText: {
     paddingTop: iphoneX ? 10 : 15,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   eightText: {
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.lightText,
   },
   button: {
     height: 45,
     width: width - 42,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     top: 10 * heightRatio,
     left: 20,
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: '700',
+    fontWeight: "700",
     color: constant.commonColor,
   },
   ninthView: {
@@ -60,9 +60,9 @@ export default StyleSheet.create({
   nonActiveView: {
     left: 20,
     height: 50,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
     marginRight: 40,
     bottom: 10,
   },

@@ -1,5 +1,5 @@
-import {StyleSheet, Platform} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet, Platform} from "react-native";
+import constant from "../../utils/constant";
 
 export default StyleSheet.create({
   firstView: {
@@ -22,12 +22,12 @@ export default StyleSheet.create({
     shadowOpacity: 1,
     elevation: 3,
     marginBottom: 15,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   thirdView: {
     flex: 0.5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   img: {
     height: 100,
@@ -35,15 +35,15 @@ export default StyleSheet.create({
   },
   fourthView: {
     flex: 1,
-    paddingTop: Platform.OS === 'ios' ? 15 : 10,
+    paddingTop: Platform.OS === "ios" ? 15 : 10,
   },
   firstText: {
     fontSize: 17,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   fifthView: {
-    flexDirection: 'row',
+    flexDirection: "row",
     paddingTop: 5,
     left: -1,
   },
@@ -54,22 +54,22 @@ export default StyleSheet.create({
   secondText: {
     fontSize: 12,
     left: 2,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.lightText,
   },
   sixthView: {
-    paddingTop: Platform.OS === 'ios' ? 20 : 18,
-    flexDirection: 'row',
+    paddingTop: Platform.OS === "ios" ? 20 : 18,
+    flexDirection: "row",
   },
   thirdText: {
     fontSize: 12,
-    fontWeight: '400',
+    fontWeight: "400",
     color: constant.blackColor,
     paddingLeft: 5,
   },
   fourthText: {
     fontSize: 12,
-    fontWeight: '400',
+    fontWeight: "400",
     color: constant.lightText,
     left: 2,
   },
@@ -78,14 +78,14 @@ export default StyleSheet.create({
     width: 80,
     backgroundColor: constant.primaryColor,
     borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     left: 10,
   },
   fifthText: {
     fontSize: 10,
     color: constant.commonColor,
-    fontWeight: '400',
+    fontWeight: "400",
   },
   starIcon: {
     height: 12,

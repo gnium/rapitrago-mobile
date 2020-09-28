@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {width, height, heightRatio} = constant.styleGuide;
 
@@ -15,7 +15,7 @@ export default StyleSheet.create({
     marginTop: 45,
     width: width - 40,
     left: 20,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   thirdView: {
     flex: 1,
@@ -23,53 +23,53 @@ export default StyleSheet.create({
   },
   firstText: {
     fontSize: 14,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: constant.thirdTextColor,
     left: 20,
   },
   secondText: {
     fontSize: 17,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   thirdText: {
     paddingTop: 2,
     fontSize: 17,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   fourthText: {
     fontSize: 12,
     left: 3,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.lightText,
   },
   fifthText: {
     fontSize: 14,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: constant.thirdTextColor,
   },
   sixthText: {
     fontSize: 13,
-    fontWeight: '500',
+    fontWeight: "500",
     left: 2,
     color: constant.lightText,
   },
   seventhText: {
     paddingTop: iphoneX ? 10 : 15,
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.lightText,
   },
   eighthText: {
     paddingTop: iphoneX ? 10 : 15,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
     color: constant.thirdTextColor,
   },
   fourthView: {
     height: 120,
-    flexDirection: 'row',
+    flexDirection: "row",
     left: 20,
   },
   fifthView: {
@@ -80,7 +80,7 @@ export default StyleSheet.create({
     width: 100,
   },
   sixthView: {
-    flexDirection: 'row',
+    flexDirection: "row",
     paddingTop: 6,
   },
   mapIcon: {
@@ -94,9 +94,9 @@ export default StyleSheet.create({
   eighthView: {
     height: 50,
     borderBottomWidth: 0.4,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
     marginRight: 40,
     paddingBottom: 2,
     borderBottomColor: constant.lightText,
@@ -105,25 +105,25 @@ export default StyleSheet.create({
     height: 45,
     width: width - 42,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     marginTop: 5 * heightRatio,
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: '700',
+    fontWeight: "700",
     color: constant.commonColor,
   },
   priceView: {
     paddingTop: 20,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   nonActiveView: {
     height: 50,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
     marginRight: 40,
     bottom: 10,
   },

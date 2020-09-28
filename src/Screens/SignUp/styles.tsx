@@ -1,12 +1,12 @@
-import {StyleSheet} from 'react-native';
-import constant from '../../utils/constant';
+import {StyleSheet} from "react-native";
+import constant from "../../utils/constant";
 
 const {width, heightRatio} = constant.styleGuide;
 
 export default StyleSheet.create({
   image: {
     flex: 1,
-    width: width,
+    width,
   },
   firstView: {
     flex: 1,
@@ -30,20 +30,20 @@ export default StyleSheet.create({
   firstText: {
     fontSize: 28 * heightRatio,
     color: constant.primaryTextColor,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   secondText: {
     top: 12,
     color: constant.secondaryTextColor,
     fontSize: 16,
-    fontWeight: '500',
+    fontWeight: "500",
   },
   fourthView: {
     height: 45,
     width: width - 110,
     borderRadius: 8,
     backgroundColor: constant.backColor,
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 50,
   },
   input: {
@@ -55,21 +55,21 @@ export default StyleSheet.create({
     width: width - 110,
     borderRadius: 8,
     backgroundColor: constant.backColor,
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 20,
   },
   button: {
     height: 50,
     width: width - 110,
     backgroundColor: constant.primaryColor,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
     marginTop: 20,
   },
   thirdText: {
     color: constant.commonColor,
     fontSize: 18,
-    fontWeight: '700',
+    fontWeight: "700",
   },
 });

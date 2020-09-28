@@ -1,13 +1,13 @@
-import React from 'react';
-import {View, Text, Image} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import React from "react";
+import {View, Text, Image} from "react-native";
+import {StackNavigationProp} from "@react-navigation/stack";
 
-import {RootStackParamList} from '../../Screens/AppNavigator';
-import Coupon from '../Coupon';
-import Button from '../Button';
-import styles from './styles';
+import {RootStackParamList} from "../../Screens/AppNavigator";
+import Coupon from "../Coupon";
+import Button from "../Button";
+import styles from "./styles";
 
-const homeIcon = require('../../../assets/home1.png');
+const homeIcon = require("../../../assets/home1.png");
 
 interface Props {
   navigation: StackNavigationProp<RootStackParamList>;
@@ -73,7 +73,7 @@ const BillDetails: React.FC<Props> = (props) => {
           </View>
           <View style={styles.buttonView}>
             <Button
-              onPress={() => navigation.navigate('CheckOut')}
+              onPress={() => navigation.navigate("CheckOut")}
               style={styles.button}>
               <Text style={styles.buttonText}>Make Payment</Text>
             </Button>

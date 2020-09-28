@@ -6,7 +6,6 @@
     "android": "react-native run-android",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "env:staging": "node scripts/set-environment.js staging",
     "env:dev": "node scripts/set-environment.js development",
     "env:prod": "node scripts/set-environment.js production",
@@ -17,7 +16,8 @@
     "_build:ios": "react-native bundle --platform ios ...",
     "build:ios": "yarn env:dev && yarn _build:ios",
     "build:ios:staging": "yarn env:staging && yarn _build:ios",
-    "build:ios:prod": "yarn env:prod && yarn _build:ios"
+    "build:ios:prod": "yarn env:prod && yarn _build:ios",
+    "lint": "eslint ./src --fix --ext .js,.ts,.tsx,.jsx"
   },
   "dependencies": {
     "@manaflair/redux-batch": "^1.0.0",
