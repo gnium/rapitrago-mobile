@@ -11,8 +11,6 @@ import {
   PURGE,
   REGISTER
 } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
-import { PersistGate } from 'redux-persist/integration/react'
 import thunk from 'redux-thunk';
 //import auth from './reducers/auth';
 import authentication from './module/authentication';
@@ -29,7 +27,6 @@ const rootReducer = combineReducers({
   merchants
 });
 
-
 // Middleware: Redux Persist Config
 const persistConfig = {
   // Root?
@@ -45,7 +42,6 @@ const persistConfig = {
 
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
-const enhancer = composeEnhancers(applyMiddleware(thunk));
 const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware({
